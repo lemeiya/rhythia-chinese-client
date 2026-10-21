@@ -1,0 +1,18 @@
+build/**
+!build/.gdignore
+android/**
+export_presets.cfg
+.import/
+.godot/
+.tools/
+*.translation
+.mono/
+addons/discord_game_sdk/bin/**
+
+.vscode/settings.json
+
+# Private community backend; keep it out of the public client repository.
+/server/
+
+# Local export packages and generated distribution output.
+/dist/

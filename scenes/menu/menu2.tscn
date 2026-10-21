@@ -1,0 +1,5264 @@
+[gd_scene load_steps=206 format=2]
+
+[ext_resource path="res://uitheme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/font/Lato/Lato-Regular.ttf" type="FontFile" id=2]
+[ext_resource path="res://scripts/ui/menu/VersionNumber.gd" type="Script" id=3]
+[ext_resource path="res://assets/images/branding/icon.png" type="Texture2D" id=4]
+[ext_resource path="res://assets/sfx/hit.wav" type="AudioStream" id=5]
+[ext_resource path="res://scripts/ui/menu/buttons/Quit.gd" type="Script" id=6]
+[ext_resource path="res://prefabs/menu/credits.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scripts/ui/menu/buttons/ContentMgrAddMap.gd" type="Script" id=8]
+[ext_resource path="res://scripts/ui/menu/buttons/PlaySong.gd" type="Script" id=9]
+[ext_resource path="res://scripts/ui/settings/MusicVolumeSetter.gd" type="Script" id=10]
+[ext_resource path="res://assets/sfx/menu_full.mp3" type="AudioStream" id=11]
+[ext_resource path="res://scripts/ui/menu/Sidebar.gd" type="Script" id=12]
+[ext_resource path="res://scripts/ui/menu/menu2.gd" type="Script" id=13]
+[ext_resource path="res://assets/font/Lato/Lato-Black.ttf" type="FontFile" id=14]
+[ext_resource path="res://assets/font/Noto_Sans_JP/NotoSansJP-Medium.otf" type="FontFile" id=15]
+[ext_resource path="res://assets/images/tiles.png" type="Texture2D" id=16]
+[ext_resource path="res://scripts/ui/menu/buttons/DifficultySort.gd" type="Script" id=17]
+[ext_resource path="res://scripts/ui/menu/buttons/MapIcon.gd" type="Script" id=18]
+[ext_resource path="res://scripts/ui/menu/buttons/MapIncludeBroken.gd" type="Script" id=19]
+[ext_resource path="res://scripts/ui/menu/buttons/diffSort.gd" type="Script" id=20]
+[ext_resource path="res://scripts/ui/menu/buttons/MapSearch.gd" type="Script" id=21]
+[ext_resource path="res://scripts/ui/menu/buttons/clipinput.gd" type="Script" id=22]
+[ext_resource path="res://scripts/ui/menu/buttons/NameSort.gd" type="Script" id=23]
+[ext_resource path="res://assets/images/ui/arrow_down.png" type="Texture2D" id=24]
+[ext_resource path="res://assets/images/ui/arrow_up.png" type="Texture2D" id=25]
+[ext_resource path="res://assets/images/ui/favorite.png" type="Texture2D" id=26]
+[ext_resource path="res://assets/font/Lato/Lato-Bold.ttf" type="FontFile" id=27]
+[ext_resource path="res://scripts/ui/menu/SongInfoScreen.gd" type="Script" id=28]
+[ext_resource path="res://scripts/ui/menu/buttons/EndInfo.gd" type="Script" id=29]
+[ext_resource path="res://scripts/ui/menu/buttons/RunMapButton.gd" type="Script" id=30]
+[ext_resource path="res://assets/sfx/new_best.wav" type="AudioStream" id=31]
+[ext_resource path="res://scripts/ui/menu/buttons/SpeedMod.gd" type="Script" id=32]
+[ext_resource path="res://scripts/ui/menu/buttons/NoFail.gd" type="Script" id=33]
+[ext_resource path="res://scripts/ui/menu/buttons/HardMode.gd" type="Script" id=34]
+[ext_resource path="res://scripts/ui/menu/buttons/EasyMode.gd" type="Script" id=35]
+[ext_resource path="res://scripts/ui/menu/buttons/MirrorX.gd" type="Script" id=36]
+[ext_resource path="res://scripts/ui/menu/buttons/MirrorY.gd" type="Script" id=37]
+[ext_resource path="res://scripts/ui/menu/buttons/Favorite.gd" type="Script" id=38]
+[ext_resource path="res://scripts/ui/menu/buttons/Convert.gd" type="Script" id=39]
+[ext_resource path="res://scripts/ui/menu/buttons/SetDifficulty.gd" type="Script" id=40]
+[ext_resource path="res://scripts/ui/menu/buttons/HpModel.gd" type="Script" id=41]
+[ext_resource path="res://assets/images/transparent.png" type="Texture2D" id=42]
+[ext_resource path="res://scripts/ui/menu/buttons/Nearsight.gd" type="Script" id=43]
+[ext_resource path="res://scripts/ui/menu/buttons/SuddenDeath.gd" type="Script" id=44]
+[ext_resource path="res://scripts/ui/menu/buttons/Ghost.gd" type="Script" id=45]
+[ext_resource path="res://scripts/ui/menu/rainbow.gd" type="Script" id=46]
+[ext_resource path="res://scenes/menu/rhythiarewrite.tscn" type="PackedScene" id=47]
+[ext_resource path="res://scripts/ui/menu/buttons/PatreonCredits.gd" type="Script" id=48]
+[ext_resource path="res://prefabs/menu/settings_page.tscn" type="PackedScene" id=49]
+[ext_resource path="res://assets/font/UbuntuMono/Regular.ttf" type="FontFile" id=50]
+[ext_resource path="res://assets/images/ui/play_circle.png" type="Texture2D" id=51]
+[ext_resource path="res://assets/images/ui/home.png" type="Texture2D" id=52]
+[ext_resource path="res://assets/images/ui/settings.png" type="Texture2D" id=53]
+[ext_resource path="res://assets/images/ui/add_icon.png" type="Texture2D" id=54]
+[ext_resource path="res://assets/images/ui/old_menu.png" type="Texture2D" id=55]
+[ext_resource path="res://assets/images/ui/quit_to_desktop.png" type="Texture2D" id=56]
+[ext_resource path="res://scripts/ui/menu/buttons/ExportTxt.gd" type="Script" id=58]
+[ext_resource path="res://scripts/ui/menu/StartOffset.gd" type="Script" id=59]
+[ext_resource path="res://scripts/ui/menu/buttons/ModChaos.gd" type="Script" id=60]
+[ext_resource path="res://assets/images/ui/placeholder.jpg" type="Texture2D" id=61]
+[ext_resource path="res://scripts/ui/menu/GradeSystem.gd" type="Script" id=62]
+[ext_resource path="res://scripts/ui/menu/buttons/VisualMode.gd" type="Script" id=63]
+[ext_resource path="res://assets/sfx/beep.wav" type="AudioStream" id=64]
+[ext_resource path="res://assets/font/NotoColorEmoji.ttf" type="FontFile" id=65]
+[ext_resource path="res://scripts/ui/menu/DownloadScreen.gd" type="Script" id=66]
+[ext_resource path="res://assets/images/ui/cloud_32.png" type="Texture2D" id=67]
+[ext_resource path="res://assets/images/modifiers/128/speed_mmm_dark.png" type="Texture2D" id=68]
+[ext_resource path="res://assets/images/modifiers/128/speed_mm_colored.png" type="Texture2D" id=69]
+[ext_resource path="res://assets/images/modifiers/128/speed_mmm_colored.png" type="Texture2D" id=70]
+[ext_resource path="res://assets/images/modifiers/128/speed_p_dark.png" type="Texture2D" id=71]
+[ext_resource path="res://assets/images/modifiers/128/speed_pppp_dark.png" type="Texture2D" id=72]
+[ext_resource path="res://assets/images/modifiers/128/speed_ppp_colored.png" type="Texture2D" id=73]
+[ext_resource path="res://assets/images/modifiers/128/speed_ppp_dark.png" type="Texture2D" id=74]
+[ext_resource path="res://assets/images/modifiers/128/speed_m_dark.png" type="Texture2D" id=75]
+[ext_resource path="res://assets/images/modifiers/128/speed_pp_colored.png" type="Texture2D" id=76]
+[ext_resource path="res://assets/images/modifiers/128/speed_p_colored.png" type="Texture2D" id=77]
+[ext_resource path="res://assets/images/modifiers/128/speed_m_colored.png" type="Texture2D" id=78]
+[ext_resource path="res://assets/images/modifiers/128/speed_pppp_colored.png" type="Texture2D" id=79]
+[ext_resource path="res://assets/images/modifiers/128/speed_mm_dark.png" type="Texture2D" id=80]
+[ext_resource path="res://assets/images/modifiers/128/speed_pp_dark.png" type="Texture2D" id=81]
+[ext_resource path="res://assets/images/modifiers/128/speed_mm.png" type="Texture2D" id=82]
+[ext_resource path="res://assets/images/modifiers/128/speed_pppp.png" type="Texture2D" id=83]
+[ext_resource path="res://assets/images/modifiers/128/speed_mmm.png" type="Texture2D" id=84]
+[ext_resource path="res://assets/images/modifiers/128/speed_p.png" type="Texture2D" id=85]
+[ext_resource path="res://assets/images/modifiers/128/speed_ppp.png" type="Texture2D" id=86]
+[ext_resource path="res://assets/images/modifiers/128/speed_m.png" type="Texture2D" id=87]
+[ext_resource path="res://assets/images/modifiers/128/speed_pp.png" type="Texture2D" id=88]
+[ext_resource path="res://scripts/ui/menu/buttons/MapActions.gd" type="Script" id=89]
+[ext_resource path="res://assets/images/ui/settings_dark.png" type="Texture2D" id=90]
+[ext_resource path="res://scripts/ui/menu/AuthorSearch.gd" type="Script" id=91]
+[ext_resource path="res://scripts/ui/menu/SearchOnline.gd" type="Script" id=92]
+[ext_resource path="res://scripts/ui/menu/ResultsHolder.gd" type="Script" id=93]
+[ext_resource path="res://scripts/ui/menu/buttons/ModEarthquake.gd" type="Script" id=94]
+[ext_resource path="res://scripts/ui/menu/WarningBar.gd" type="Script" id=95]
+[ext_resource path="res://scripts/ui/menu/buttons/ModFlashlight.gd" type="Script" id=96]
+[ext_resource path="res://scripts/ui/settings/InvertMouse.gd" type="Script" id=97]
+[ext_resource path="res://assets/images/cursors/circle.png" type="Texture2D" id=98]
+[ext_resource path="res://scripts/ui/menu/MenuMouse.gd" type="Script" id=99]
+[ext_resource path="res://scripts/ui/settings/CustomSpeed.gd" type="Script" id=100]
+[ext_resource path="res://scripts/ui/menu/buttons/ModHardRock.gd" type="Script" id=101]
+[ext_resource path="res://assets/images/ui/localization.png" type="Texture2D" id=102]
+[ext_resource path="res://scenes/menu/contentmgr.tscn" type="PackedScene" id=103]
+[ext_resource path="res://scenes/menu/language.tscn" type="PackedScene" id=104]
+[ext_resource path="res://scripts/ui/menu/buttons/v3MapList.gd" type="Script" id=105]
+
+[sub_resource type="Gradient" id=163]
+offsets = PackedFloat32Array( 0, 0.5, 1 )
+colors = PackedColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture2D" id=164]
+gradient = SubResource( 163 )
+
+[sub_resource type="Curve" id=165]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.5, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=166]
+curve = SubResource( 165 )
+
+[sub_resource type="ParticleProcessMaterial" id=167]
+emission_shape = 2
+emission_box_extents = Vector3( 1080, 720, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 24.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.1
+scale_curve = SubResource( 166 )
+color = Color( 1, 1, 1, 0.196078 )
+color_ramp = SubResource( 164 )
+hue_variation = 0.04
+
+[sub_resource type="ParticleProcessMaterial" id=168]
+emission_shape = 2
+emission_box_extents = Vector3( 1080, 720, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 24.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.8
+scale_curve = SubResource( 166 )
+color = Color( 1, 1, 1, 0.0156863 )
+color_ramp = SubResource( 164 )
+
+[sub_resource type="StyleBoxFlat" id=70]
+draw_center = false
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="Shader" id=128]
+code = "shader_type canvas_item;
+
+void fragment() {
+	vec2 muv = (UV - vec2(0.5)) * 2.0;
+	float m = 1.0 - max(abs(muv.x),abs(muv.y));
+	COLOR = texture(TEXTURE,UV)*(1.0 + clamp((m*1.5+0.5),0,1.0))/2.0;
+}"
+
+[sub_resource type="ShaderMaterial" id=60]
+shader = SubResource( 128 )
+
+[sub_resource type="Shader" id=130]
+code = "shader_type canvas_item;
+
+void fragment() {
+	vec2 muv = (UV - vec2(0.5)) * 2.0;
+	float m = 1.0 - max(abs(muv.x),abs(muv.y));
+	COLOR = vec4(vec3((0.5 + clamp((m*1.5+0.5),0.0,1.0)/2.0)),1.0) * texture(TEXTURE,UV);
+}"
+
+[sub_resource type="ShaderMaterial" id=72]
+shader = SubResource( 130 )
+
+[sub_resource type="FontFile" id=74]
+size = 17
+outline_size = 3
+outline_color = Color( 0, 0, 0, 0.313726 )
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="Shader" id=129]
+code = "shader_type canvas_item;
+
+void fragment() {
+	vec2 uv = UV + vec2(TIME * -0.2);
+	COLOR.rgb = texture(TEXTURE,UV).rgb * (0.75 + (0.25 * sin(length(uv*6.285))));
+}"
+
+[sub_resource type="ShaderMaterial" id=62]
+shader = SubResource( 129 )
+
+[sub_resource type="StyleBoxFlat" id=63]
+bg_color = Color( 0.6, 0.6, 0.6, 0.0941176 )
+
+[sub_resource type="StyleBoxFlat" id=73]
+bg_color = Color( 1, 1, 0.937255, 0.333333 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 1, 1, 1, 1 )
+border_blend = true
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id=64]
+
+[sub_resource type="StyleBoxEmpty" id=65]
+
+[sub_resource type="StyleBoxEmpty" id=66]
+
+[sub_resource type="FontFile" id=98]
+size = 18
+use_filter = true
+font_data = ExtResource( 27 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=91]
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=116]
+size = 17
+use_filter = true
+font_data = ExtResource( 27 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=117]
+use_filter = true
+font_data = ExtResource( 27 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=118]
+use_filter = true
+font_data = ExtResource( 50 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=99]
+use_filter = true
+font_data = ExtResource( 27 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=119]
+size = 20
+use_filter = true
+font_data = ExtResource( 27 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="StyleBoxFlat" id=120]
+bg_color = Color( 0.12549, 0.0941176, 0.258824, 1 )
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+corner_detail = 10
+shadow_color = Color( 0.368627, 0.466667, 1, 0.6 )
+shadow_size = 7
+anti_aliasing_size = 1.761
+
+[sub_resource type="StyleBoxFlat" id=121]
+bg_color = Color( 0.0627451, 0.0431373, 0.152941, 1 )
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+corner_detail = 10
+shadow_color = Color( 0.403922, 0.494118, 1, 0.721569 )
+shadow_size = 12
+anti_aliasing_size = 1.761
+
+[sub_resource type="StyleBoxEmpty" id=122]
+
+[sub_resource type="StyleBoxFlat" id=123]
+bg_color = Color( 0.0627451, 0.0470588, 0.141176, 1 )
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+corner_detail = 10
+shadow_color = Color( 0.1961, 0.246185, 0.53, 0.6 )
+anti_aliasing_size = 1.761
+
+[sub_resource type="StyleBoxFlat" id=124]
+bg_color = Color( 0.105882, 0.0784314, 0.235294, 1 )
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+corner_detail = 10
+shadow_color = Color( 0.368627, 0.466667, 1, 0.6 )
+shadow_size = 5
+anti_aliasing_size = 1.761
+
+[sub_resource type="StyleBoxFlat" id=88]
+bg_color = Color( 0.498039, 0.894118, 1, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="FontFile" id=97]
+size = 24
+use_filter = true
+font_data = ExtResource( 27 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=90]
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=89]
+size = 24
+use_filter = true
+font_data = ExtResource( 27 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="Shader" id=131]
+code = "shader_type canvas_item;
+
+uniform float amount = 0.0;
+
+void fragment() {
+	vec2 uv = UV + vec2(TIME * -0.07);
+	float mult = ( 0.8 + (( 1.0 - amount ) * 0.2) + (amount * 0.2 * sin(length( uv*38.0) )) );
+	COLOR.rgb *= texture(TEXTURE,UV).rgb * mult;
+	COLOR.a *= texture(TEXTURE,UV).a;
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=126]
+shader = SubResource( 131 )
+shader_param/amount = 0.0
+
+[sub_resource type="FontFile" id=176]
+size = 418
+use_filter = true
+extra_spacing_char = -59
+font_data = ExtResource( 27 )
+
+[sub_resource type="FontFile" id=127]
+size = 35
+use_filter = true
+font_data = ExtResource( 27 )
+
+[sub_resource type="FontFile" id=105]
+size = 28
+font_data = ExtResource( 2 )
+
+[sub_resource type="FontFile" id=106]
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=107]
+size = 24
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="FontFile" id=108]
+size = 24
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="FontFile" id=92]
+size = 14
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=148]
+texture = ExtResource( 84 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=134]
+texture = ExtResource( 70 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxEmpty" id=155]
+
+[sub_resource type="StyleBoxTexture" id=135]
+texture = ExtResource( 68 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="ButtonGroup" id=93]
+
+[sub_resource type="FontFile" id=94]
+size = 14
+use_filter = true
+extra_spacing_char = -3
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxTexture" id=149]
+texture = ExtResource( 82 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=136]
+texture = ExtResource( 69 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=137]
+texture = ExtResource( 80 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=150]
+texture = ExtResource( 87 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=138]
+texture = ExtResource( 78 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=139]
+texture = ExtResource( 75 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=151]
+texture = ExtResource( 85 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=140]
+texture = ExtResource( 77 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=141]
+texture = ExtResource( 71 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=152]
+texture = ExtResource( 88 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=142]
+texture = ExtResource( 76 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=143]
+texture = ExtResource( 81 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=153]
+texture = ExtResource( 86 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=144]
+texture = ExtResource( 73 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=145]
+texture = ExtResource( 74 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=154]
+texture = ExtResource( 83 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=146]
+texture = ExtResource( 79 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="StyleBoxTexture" id=147]
+texture = ExtResource( 72 )
+region_rect = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="FontFile" id=96]
+size = 12
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="ButtonGroup" id=67]
+
+[sub_resource type="FontFile" id=71]
+size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 0.207843 )
+use_filter = true
+font_data = ExtResource( 14 )
+
+[sub_resource type="FontFile" id=75]
+size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 0.207843 )
+use_filter = true
+extra_spacing_char = 1
+font_data = ExtResource( 14 )
+
+[sub_resource type="FontFile" id=76]
+size = 24
+outline_size = 3
+outline_color = Color( 0, 0, 0, 0.207843 )
+use_filter = true
+font_data = ExtResource( 14 )
+
+[sub_resource type="FontFile" id=77]
+size = 28
+outline_size = 3
+outline_color = Color( 0, 0, 0, 0.207843 )
+use_filter = true
+extra_spacing_char = 1
+font_data = ExtResource( 14 )
+
+[sub_resource type="FontFile" id=78]
+size = 28
+outline_size = 3
+outline_color = Color( 0, 0, 0, 0.207843 )
+use_filter = true
+font_data = ExtResource( 14 )
+
+[sub_resource type="FontFile" id=79]
+size = 72
+outline_size = 3
+outline_color = Color( 0, 0, 0, 0.207843 )
+use_filter = true
+spacing_top = -6
+font_data = ExtResource( 15 )
+
+[sub_resource type="StyleBoxFlat" id=80]
+bg_color = Color( 0.654902, 0.654902, 0.654902, 0.588235 )
+
+[sub_resource type="StyleBoxFlat" id=81]
+bg_color = Color( 0.623529, 0.623529, 0.623529, 0.509804 )
+
+[sub_resource type="StyleBoxEmpty" id=82]
+
+[sub_resource type="StyleBoxFlat" id=83]
+bg_color = Color( 0.211765, 0.211765, 0.211765, 0.443137 )
+
+[sub_resource type="StyleBoxFlat" id=84]
+bg_color = Color( 0.503906, 0.503906, 0.503906, 0.509804 )
+
+[sub_resource type="FontFile" id=69]
+size = 14
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="StyleBoxFlat" id=59]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="FontFile" id=61]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 0.207843 )
+use_filter = true
+font_data = ExtResource( 14 )
+
+[sub_resource type="FontFile" id=68]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 0.207843 )
+use_filter = true
+font_data = ExtResource( 15 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_right = 2
+border_color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="ButtonGroup" id=5]
+
+[sub_resource type="FontFile" id=6]
+size = 18
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=8]
+size = 18
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 15 )
+
+[sub_resource type="FontFile" id=7]
+size = 22
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="FontFile" id=157]
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 65 )
+fallback/1 = ExtResource( 15 )
+
+[sub_resource type="GDScript" id=132]
+script/source = "extends Control
+
+var switch_time:float = 0.17
+
+var t:float = switch_time
+var i:int = -1
+
+func _process(delta):
+	var up = false
+	t += delta
+	if t >= switch_time:
+		t -= switch_time
+		up = true
+		i += 1
+		if i > 7: i -= 8
+	
+	for n in get_children():
+		var ni = int(String(n.name))
+		if up and i == ni:
+			n.modulate.a = 1
+		else: n.modulate.a = max(n.modulate.a-(delta*1.35),0)
+"
+
+[sub_resource type="FontFile" id=133]
+size = 18
+use_filter = true
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 65 )
+fallback/1 = ExtResource( 15 )
+
+[sub_resource type="Gradient" id=174]
+colors = PackedColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture2D" id=175]
+gradient = SubResource( 174 )
+
+[sub_resource type="Curve" id=171]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=172]
+curve = SubResource( 171 )
+
+[sub_resource type="ParticleProcessMaterial" id=173]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.1
+scale_curve = SubResource( 172 )
+color = Color( 1, 1, 1, 0.392157 )
+color_ramp = SubResource( 175 )
+
+[node name="Menu" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+pivot_offset = Vector2( 401.518, 42 )
+theme = ExtResource( 1 )
+color = Color( 0.0156863, 0.0156863, 0.0156863, 0.392157 )
+script = ExtResource( 13 )
+
+[node name="Particles" type="GPUParticles2D" parent="."]
+visible = false
+position = Vector2( 1024, 720 )
+z_index = -1024
+amount = 1024
+lifetime = 2.0
+speed_scale = 0.5
+visibility_rect = Rect2( 0, 0, 1920, 1080 )
+local_coords = false
+process_material = SubResource( 167 )
+texture = ExtResource( 98 )
+
+[node name="Particles2" type="GPUParticles2D" parent="."]
+visible = false
+position = Vector2( 1024, 720 )
+z_index = -1024
+amount = 2048
+lifetime = 2.0
+speed_scale = 0.5
+visibility_rect = Rect2( 0, 0, 1920, 1080 )
+local_coords = false
+process_material = SubResource( 168 )
+texture = ExtResource( 98 )
+
+[node name="Press" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -16.0
+pitch_scale = 1.25
+
+[node name="Main" type="ReferenceRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+custom_minimum_size = Vector2( 1220, 0 )
+pivot_offset = Vector2( -398, 64 )
+
+[node name="Maps" type="HBoxContainer" parent="Main"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 22.0
+grow_horizontal = 0
+size_flags_horizontal = 2
+size_flags_vertical = 7
+
+[node name="Results" type="HBoxContainer" parent="Main/Maps"]
+offset_right = 655.0
+offset_bottom = 742.0
+custom_minimum_size = Vector2( 0, 496.839 )
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/separation = 15
+alignment = 1
+script = ExtResource( 93 )
+
+[node name="VSeparator" type="VSeparator" parent="Main/Maps/Results"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+offset_right = 4.0
+offset_bottom = 742.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.35
+
+[node name="VSeparator3" type="VSeparator" parent="Main/Maps/Results"]
+modulate = Color( 1, 1, 1, 0 )
+offset_right = 4.0
+offset_bottom = 742.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="Results" type="VBoxContainer" parent="Main/Maps/Results"]
+offset_left = 19.0
+offset_right = 655.0
+offset_bottom = 742.0
+custom_minimum_size = Vector2( 497.255, 534.104 )
+size_flags_horizontal = 7
+size_flags_vertical = 3
+alignment = 1
+script = ExtResource( 28 )
+
+[node name="Actions" type="VBoxContainer" parent="Main/Maps/Results/Results"]
+visible = false
+offset_right = 225.0
+offset_bottom = 89.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Convert" type="Button" parent="Main/Maps/Results/Results/Actions"]
+offset_right = 225.0
+offset_bottom = 27.0
+custom_minimum_size = Vector2( 225, 27 )
+theme = ExtResource( 1 )
+action_mode = 0
+text = "Convert map to .sspm"
+clip_text = true
+script = ExtResource( 39 )
+
+[node name="Difficulty" type="OptionButton" parent="Main/Maps/Results/Results/Actions"]
+offset_top = 31.0
+offset_right = 225.0
+offset_bottom = 58.0
+custom_minimum_size = Vector2( 225, 27 )
+theme = ExtResource( 1 )
+text = "Set difficulty"
+align = 1
+script = ExtResource( 40 )
+
+[node name="ExportTxt" type="Button" parent="Main/Maps/Results/Results/Actions"]
+offset_top = 62.0
+offset_right = 225.0
+offset_bottom = 89.0
+custom_minimum_size = Vector2( 225, 27 )
+theme = ExtResource( 1 )
+action_mode = 0
+text = "Export map data"
+clip_text = true
+script = ExtResource( 58 )
+
+[node name="RS" type="VBoxContainer" parent="Main/Maps/Results/Results"]
+offset_right = 636.0
+offset_bottom = 742.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="HSeparator4" type="HSeparator" parent="Main/Maps/Results/Results/RS"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+offset_right = 636.0
+offset_bottom = 21.0
+size_flags_vertical = 3
+
+[node name="HSeparator2" type="HSeparator" parent="Main/Maps/Results/Results/RS"]
+offset_right = 636.0
+offset_bottom = 8.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="H1" type="HBoxContainer" parent="Main/Maps/Results/Results/RS"]
+offset_top = 12.0
+offset_right = 636.0
+offset_bottom = 240.0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+alignment = 1
+
+[node name="ButtonDisp" type="AspectRatioContainer" parent="Main/Maps/Results/Results/RS/H1"]
+offset_right = 212.0
+offset_bottom = 228.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="NODIF" type="Panel" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp"]
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 220.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/NODIF"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/NODIF"]
+visible = false
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/NODIF"]
+visible = false
+modulate = Color( 1, 0.360784, 0.360784, 1 )
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 31.0
+offset_bottom = 31.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/NODIF"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -6.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="EASY" type="Panel" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp"]
+visible = false
+self_modulate = Color( 0, 1, 0, 1 )
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 220.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/EASY"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 0, 1, 0, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/EASY"]
+visible = false
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/EASY"]
+visible = false
+modulate = Color( 0.690196, 0.141176, 1, 1 )
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 31.0
+offset_bottom = 31.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/EASY"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -6.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "Artist Name - Song Name"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MEDIUM" type="Panel" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp"]
+visible = false
+self_modulate = Color( 1, 0.72549, 0, 1 )
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 220.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/MEDIUM"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 1, 0.72549, 0, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/MEDIUM"]
+visible = false
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/MEDIUM"]
+visible = false
+modulate = Color( 0.2548, 0.57148, 0.91, 1 )
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 31.0
+offset_bottom = 31.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/MEDIUM"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -6.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "Artist Name - Song Name"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HARD" type="Panel" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp"]
+visible = false
+self_modulate = Color( 1, 0, 0, 1 )
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 220.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/HARD"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/HARD"]
+visible = false
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/HARD"]
+visible = false
+modulate = Color( 0.321569, 0.662745, 0.25098, 1 )
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 31.0
+offset_bottom = 31.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/HARD"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -6.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "Artist Name - Song Name"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LOGIC" type="Panel" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp"]
+visible = false
+self_modulate = Color( 0.843137, 0.415686, 1, 1 )
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 220.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/LOGIC"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 0.843137, 0.415686, 1, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/LOGIC"]
+visible = false
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/LOGIC"]
+visible = false
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 31.0
+offset_bottom = 31.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/LOGIC"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -6.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "Artist Name - Song Name"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TASUKETE" type="Panel" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp"]
+visible = false
+self_modulate = Color( 0.211765, 0.188235, 0.309804, 1 )
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 220.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource( 70 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/TASUKETE"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 0.211765, 0.188235, 0.309804, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/TASUKETE"]
+visible = false
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/TASUKETE"]
+visible = false
+modulate = Color( 0.419608, 0.498039, 1, 1 )
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 31.0
+offset_bottom = 31.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp/TASUKETE"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -6.0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "Artist Name - Song Name"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select" type="Button" parent="Main/Maps/Results/Results/RS/H1/ButtonDisp"]
+visible = false
+material = SubResource( 62 )
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 220.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 73 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+action_mode = 0
+
+[node name="VSeparator" type="VSeparator" parent="Main/Maps/Results/Results/RS/H1"]
+modulate = Color( 1, 1, 1, 0 )
+offset_left = 216.0
+offset_right = 227.0
+offset_bottom = 228.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.05
+
+[node name="Info" type="VBoxContainer" parent="Main/Maps/Results/Results/RS/H1"]
+offset_left = 231.0
+offset_right = 636.0
+offset_bottom = 228.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+size_flags_stretch_ratio = 1.9
+theme_override_constants/separation = 0
+
+[node name="Data" type="HBoxContainer" parent="Main/Maps/Results/Results/RS/H1/Info"]
+offset_right = 405.0
+offset_bottom = 22.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Data" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/Data"]
+offset_right = 405.0
+offset_bottom = 22.0
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource( 1 )
+theme_override_fonts/font = SubResource( 98 )
+text = "-"
+valign = 1
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/Data/Data"]
+visible = false
+offset_left = -85.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.698039, 0.901961, 0.639216, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Difficulty:"
+align = 2
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator4" type="HSeparator" parent="Main/Maps/Results/Results/RS/H1/Info"]
+modulate = Color( 1, 1, 1, 0 )
+offset_top = 22.0
+offset_right = 405.0
+offset_bottom = 26.0
+custom_minimum_size = Vector2( 0, 2 )
+size_flags_vertical = 3
+
+[node name="Name" type="HBoxContainer" parent="Main/Maps/Results/Results/RS/H1/Info"]
+offset_top = 26.0
+offset_right = 405.0
+offset_bottom = 71.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/Name"]
+visible = false
+offset_top = 24.0
+offset_right = 1.0
+offset_bottom = 44.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.698039, 0.901961, 0.639216, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Name:"
+align = 2
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/Name"]
+offset_right = 405.0
+offset_bottom = 45.0
+custom_minimum_size = Vector2( 0, 45 )
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.568627, 0.956863, 1, 1 )
+theme_override_fonts/font = SubResource( 116 )
+text = "-"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator3" type="HSeparator" parent="Main/Maps/Results/Results/RS/H1/Info"]
+modulate = Color( 1, 1, 1, 0 )
+offset_top = 71.0
+offset_right = 405.0
+offset_bottom = 81.0
+custom_minimum_size = Vector2( 0, 10 )
+size_flags_vertical = 3
+
+[node name="SongName" type="HBoxContainer" parent="Main/Maps/Results/Results/RS/H1/Info"]
+visible = false
+offset_top = 21.0
+offset_right = 427.0
+offset_bottom = 46.0
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/SongName"]
+offset_top = 2.0
+offset_right = 70.0
+offset_bottom = 22.0
+focus_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.698039, 0.901961, 0.639216, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Song"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="SongName" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/SongName"]
+offset_left = 74.0
+offset_right = 427.0
+offset_bottom = 25.0
+custom_minimum_size = Vector2( 0, 25 )
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+size_flags_stretch_ratio = 5.0
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.952941, 0.752941, 1, 1 )
+theme_override_fonts/font = SubResource( 117 )
+text = "-"
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mapper" type="HBoxContainer" parent="Main/Maps/Results/Results/RS/H1/Info"]
+offset_top = 81.0
+offset_right = 405.0
+offset_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/Mapper"]
+offset_right = 61.0
+offset_bottom = 25.0
+custom_minimum_size = Vector2( 61, 0 )
+focus_mode = 2
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.698039, 0.901961, 0.639216, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Map By: "
+align = 2
+clip_text = true
+
+[node name="Mapper" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/Mapper"]
+offset_left = 65.0
+offset_right = 405.0
+offset_bottom = 25.0
+custom_minimum_size = Vector2( 0, 25 )
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.952941, 0.752941, 1, 1 )
+theme_override_fonts/font = SubResource( 117 )
+text = "-"
+autowrap = true
+
+[node name="Id" type="HBoxContainer" parent="Main/Maps/Results/Results/RS/H1/Info"]
+offset_top = 106.0
+offset_right = 405.0
+offset_bottom = 146.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/Id"]
+offset_right = 60.0
+offset_bottom = 40.0
+custom_minimum_size = Vector2( 60, 0 )
+focus_mode = 2
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.698039, 0.901961, 0.639216, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Song ID: "
+align = 2
+clip_text = true
+
+[node name="Id" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/Id"]
+offset_left = 64.0
+offset_right = 405.0
+offset_bottom = 40.0
+custom_minimum_size = Vector2( 0, 40 )
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.6, 0.6, 0.6, 1 )
+theme_override_fonts/font = SubResource( 118 )
+text = "-"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SMM" type="HBoxContainer" parent="Main/Maps/Results/Results/RS/H1/Info"]
+visible = false
+offset_top = 146.0
+offset_right = 420.0
+offset_bottom = 166.0
+
+[node name="SMM" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/SMM"]
+offset_right = 420.0
+offset_bottom = 20.0
+focus_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 0.760784, 0.490196, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Single Map Mode"
+valign = 1
+clip_text = true
+
+[node name="Warning" type="HBoxContainer" parent="Main/Maps/Results/Results/RS/H1/Info"]
+visible = false
+offset_top = 71.0
+offset_right = 427.0
+offset_bottom = 71.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Warning" type="Label" parent="Main/Maps/Results/Results/RS/H1/Info/Warning"]
+visible = false
+offset_top = 25.0
+offset_right = 401.0
+offset_bottom = 45.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 1, 0, 1 )
+theme_override_fonts/font = SubResource( 99 )
+text = "Warning text goes here"
+align = 1
+valign = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Main/Maps/Results/Results/RS/H1/Info"]
+modulate = Color( 1, 1, 1, 0 )
+offset_top = 146.0
+offset_right = 405.0
+offset_bottom = 161.0
+custom_minimum_size = Vector2( 0, 15 )
+size_flags_vertical = 3
+
+[node name="Run" type="Button" parent="Main/Maps/Results/Results/RS/H1/Info"]
+offset_top = 161.0
+offset_right = 405.0
+offset_bottom = 186.0
+tooltip_text = "(Spacebar, Xbox A)"
+size_flags_horizontal = 7
+size_flags_vertical = 7
+size_flags_stretch_ratio = 3.0
+theme = ExtResource( 1 )
+theme_override_colors/font_disabled_color = Color( 0.576471, 0.576471, 0.576471, 1 )
+theme_override_colors/font_focus_color = Color( 0.541176, 1, 0.580392, 1 )
+theme_override_colors/font_color = Color( 0.541176, 1, 0.580392, 1 )
+theme_override_colors/font_hover_color = Color( 0.631373, 1, 0.913725, 1 )
+theme_override_colors/font_pressed_color = Color( 0, 1, 0.976471, 1 )
+theme_override_fonts/font = SubResource( 119 )
+theme_override_styles/hover = SubResource( 120 )
+theme_override_styles/pressed = SubResource( 121 )
+theme_override_styles/focus = SubResource( 122 )
+theme_override_styles/disabled = SubResource( 123 )
+theme_override_styles/normal = SubResource( 124 )
+toggle_mode = true
+action_mode = 0
+text = "Start!"
+script = ExtResource( 30 )
+
+[node name="HSeparator" type="HSeparator" parent="Main/Maps/Results/Results/RS/H1/Info"]
+modulate = Color( 1, 1, 1, 0 )
+offset_top = 186.0
+offset_right = 405.0
+offset_bottom = 196.0
+custom_minimum_size = Vector2( 0, 10 )
+size_flags_vertical = 3
+
+[node name="Control" type="HBoxContainer" parent="Main/Maps/Results/Results/RS/H1/Info"]
+offset_top = 196.0
+offset_right = 405.0
+offset_bottom = 228.0
+custom_minimum_size = Vector2( 0, 32 )
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="Actions" type="MenuButton" parent="Main/Maps/Results/Results/RS/H1/Info/Control"]
+offset_right = 32.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 32, 32 )
+size_flags_vertical = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_disabled_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_focus_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_hover_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_pressed_color = Color( 0, 0, 0, 1 )
+icon = ExtResource( 90 )
+flat = false
+icon_alignment = 1
+expand_icon = true
+script = ExtResource( 89 )
+
+[node name="Favorite" type="Button" parent="Main/Maps/Results/Results/RS/H1/Info/Control"]
+offset_left = 44.0
+offset_right = 218.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 0, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme = ExtResource( 1 )
+theme_override_styles/pressed = SubResource( 88 )
+toggle_mode = true
+action_mode = 0
+text = "Favorite"
+script = ExtResource( 38 )
+
+[node name="PreviewMusic" type="Button" parent="Main/Maps/Results/Results/RS/H1/Info/Control"]
+offset_left = 230.0
+offset_right = 405.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 0, 32 )
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme = ExtResource( 1 )
+action_mode = 0
+text = "Play Music"
+script = ExtResource( 9 )
+
+[node name="Song" type="AudioStreamPlayer" parent="Main/Maps/Results/Results/RS/H1/Info/Control/PreviewMusic"]
+process_mode = 3
+bus = "Music"
+script = ExtResource( 10 )
+
+[node name="MenuSong" type="AudioStreamPlayer" parent="Main/Maps/Results/Results/RS/H1/Info/Control/PreviewMusic"]
+process_mode = 3
+stream = ExtResource( 11 )
+volume_db = -10.0
+bus = "Music"
+
+[node name="HSeparator3" type="HSeparator" parent="Main/Maps/Results/Results/RS"]
+modulate = Color( 1, 1, 1, 0 )
+offset_top = 244.0
+offset_right = 636.0
+offset_bottom = 248.0
+
+[node name="HMid" type="HBoxContainer" parent="Main/Maps/Results/Results/RS"]
+offset_top = 252.0
+offset_right = 636.0
+offset_bottom = 292.0
+custom_minimum_size = Vector2( 0, 40 )
+size_flags_horizontal = 7
+size_flags_vertical = 0
+
+[node name="VSeparator2" type="VSeparator" parent="Main/Maps/Results/Results/RS/HMid"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+offset_right = 4.0
+offset_bottom = 40.0
+size_flags_stretch_ratio = 0.2
+
+[node name="Difficulty" type="Label" parent="Main/Maps/Results/Results/RS/HMid"]
+offset_top = 5.0
+offset_right = 208.0
+offset_bottom = 35.0
+focus_mode = 2
+size_flags_horizontal = 7
+theme = ExtResource( 1 )
+theme_override_fonts/font = SubResource( 97 )
+text = "Eternal Damnation"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/HMid/Difficulty"]
+visible = false
+offset_left = -85.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.698039, 0.901961, 0.639216, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Difficulty:"
+align = 2
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator3" type="VSeparator" parent="Main/Maps/Results/Results/RS/HMid"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+offset_left = 211.0
+offset_right = 354.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+
+[node name="Hitboxes" type="Label" parent="Main/Maps/Results/Results/RS/HMid"]
+offset_left = 212.0
+offset_top = 10.0
+offset_right = 628.0
+offset_bottom = 30.0
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.717647, 1, 0.760784, 1 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 0 )
+theme_override_fonts/font = SubResource( 90 )
+text = "Default hitboxes, default hitwindow"
+align = 1
+valign = 1
+
+[node name="VSeparator" type="VSeparator" parent="Main/Maps/Results/Results/RS/HMid"]
+modulate = Color( 1, 1, 1, 0 )
+offset_left = 632.0
+offset_right = 636.0
+offset_bottom = 40.0
+
+[node name="HSeparator" type="HSeparator" parent="Main/Maps/Results/Results/RS"]
+offset_top = 296.0
+offset_right = 636.0
+offset_bottom = 305.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="HSeparator6" type="HSeparator" parent="Main/Maps/Results/Results/RS"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+offset_top = 369.0
+offset_right = 636.0
+offset_bottom = 386.0
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/Maps/Results/Results/RS"]
+offset_top = 309.0
+offset_right = 636.0
+offset_bottom = 339.0
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/HBoxContainer"]
+offset_top = 5.0
+offset_right = 252.0
+offset_bottom = 25.0
+size_flags_horizontal = 3
+
+[node name="ModsTitle" type="Label" parent="Main/Maps/Results/Results/RS/HBoxContainer"]
+offset_left = 256.0
+offset_right = 636.0
+offset_bottom = 30.0
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 0.756863, 0.960784, 1 )
+theme_override_fonts/font = SubResource( 89 )
+text = "Modifiers"
+align = 1
+
+[node name="H2" type="HBoxContainer" parent="Main/Maps/Results/Results/RS"]
+offset_top = 343.0
+offset_right = 636.0
+offset_bottom = 703.0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+alignment = 2
+
+[node name="VSeparator2" type="VSeparator" parent="Main/Maps/Results/Results/RS/H2"]
+modulate = Color( 1, 1, 1, 0 )
+offset_right = 4.0
+offset_bottom = 360.0
+size_flags_horizontal = 3
+
+[node name="EndInfo" type="ReferenceRect" parent="Main/Maps/Results/Results/RS/H2"]
+offset_left = 8.0
+offset_right = 282.0
+offset_bottom = 360.0
+custom_minimum_size = Vector2( 274, 280 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 29 )
+
+[node name="NewBest" type="AudioStreamPlayer" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+stream = ExtResource( 31 )
+pitch_scale = 0.8
+bus = "PBSound"
+
+[node name="LetterGrade2" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+material = SubResource( 126 )
+offset_left = 6.0
+offset_top = -107.0
+offset_right = 280.0
+offset_bottom = 396.0
+grow_horizontal = 2
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 1, 1, 0.0784314 )
+theme_override_fonts/font = SubResource( 176 )
+text = "S"
+align = 1
+valign = 1
+
+[node name="Result" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+offset_left = 5.0
+offset_right = 273.0
+offset_bottom = 44.0
+focus_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.917647, 0.52549, 0.290196, 1 )
+theme_override_fonts/font = SubResource( 89 )
+align = 1
+valign = 1
+
+[node name="LetterGrade" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+visible = false
+material = SubResource( 126 )
+offset_left = 172.0
+offset_right = 271.0
+offset_bottom = 44.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 1, 1, 1 )
+theme_override_fonts/font = SubResource( 127 )
+text = "S"
+align = 2
+valign = 1
+
+[node name="Misses" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+offset_left = 5.0
+offset_top = 72.0
+offset_right = 144.0
+offset_bottom = 119.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.917647, 0.290196, 0.290196, 1 )
+theme_override_fonts/font = SubResource( 105 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="Title" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo/Misses"]
+offset_top = -24.0
+offset_right = 139.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.917647, 0.290196, 0.290196, 1 )
+theme_override_fonts/font = SubResource( 106 )
+text = "MISSES"
+align = 1
+valign = 1
+
+[node name="FullCombo" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+visible = false
+offset_left = 5.0
+offset_top = 72.0
+offset_right = 144.0
+offset_bottom = 119.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.572549, 0.937255, 0.976471, 1 )
+theme_override_fonts/font = SubResource( 107 )
+text = "Full Combo"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo/FullCombo"]
+offset_top = -24.0
+offset_right = 139.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.572549, 0.937255, 0.976471, 1 )
+theme_override_fonts/font = SubResource( 106 )
+text = "MISSES"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pauses" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+offset_left = 135.0
+offset_top = 72.0
+offset_right = 274.0
+offset_bottom = 119.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.984314, 0.552941, 1, 1 )
+theme_override_fonts/font = SubResource( 105 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="Title" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo/Pauses"]
+anchor_left = -0.971
+anchor_top = -1.532
+anchor_right = -0.971
+anchor_bottom = -1.532
+offset_left = 132.969
+offset_top = 48.004
+offset_right = 273.969
+offset_bottom = 72.004
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.984314, 0.552941, 1, 1 )
+theme_override_fonts/font = SubResource( 106 )
+text = "PAUSES"
+align = 1
+valign = 1
+
+[node name="NoPauses" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+offset_left = 134.0
+offset_top = 72.0
+offset_right = 273.0
+offset_bottom = 119.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.443137, 1, 0.607843, 1 )
+theme_override_fonts/font = SubResource( 107 )
+text = "No Pauses"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo/NoPauses"]
+anchor_left = -1.036
+anchor_top = -1.532
+anchor_right = -1.036
+anchor_bottom = -1.532
+offset_left = 144.004
+offset_top = 48.004
+offset_right = 283.004
+offset_bottom = 72.004
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.443137, 1, 0.607843, 1 )
+theme_override_fonts/font = SubResource( 106 )
+text = "PAUSES"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Progress" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+offset_left = 5.0
+offset_top = 152.0
+offset_right = 144.0
+offset_bottom = 232.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 0.956863, 0.552941, 1 )
+theme_override_fonts/font = SubResource( 108 )
+text = "-
+-"
+align = 1
+valign = 1
+
+[node name="Title" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo/Progress"]
+anchor_left = -0.036
+anchor_top = -1.9
+anchor_right = -0.036
+anchor_bottom = -1.9
+offset_left = 4.004
+offset_top = 129.0
+offset_right = 143.004
+offset_bottom = 153.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 0.956863, 0.552941, 1 )
+theme_override_fonts/font = SubResource( 106 )
+text = "PROGRESS"
+align = 1
+valign = 1
+
+[node name="Accuracy" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+offset_left = 135.0
+offset_top = 152.0
+offset_right = 274.0
+offset_bottom = 232.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.623529, 0.67451, 1, 1 )
+theme_override_fonts/font = SubResource( 108 )
+text = "-
+-"
+align = 1
+valign = 1
+
+[node name="Title" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo/Accuracy"]
+anchor_left = -0.971
+anchor_top = -1.9
+anchor_right = -0.971
+anchor_bottom = -1.9
+offset_left = 134.969
+offset_top = 128.0
+offset_right = 273.969
+offset_bottom = 152.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.623529, 0.67451, 1, 1 )
+theme_override_fonts/font = SubResource( 106 )
+text = "ACCURACY"
+align = 1
+valign = 1
+
+[node name="MaxCombo" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo"]
+modulate = Color( 0.572549, 1, 0.568627, 1 )
+offset_left = 70.0
+offset_top = 255.0
+offset_right = 210.0
+offset_bottom = 328.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.623529, 0.67451, 1, 1 )
+theme_override_fonts/font = SubResource( 108 )
+text = "-
+"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Title" type="Label" parent="Main/Maps/Results/Results/RS/H2/EndInfo/MaxCombo"]
+anchor_left = -0.5
+anchor_top = -3.493
+anchor_right = -0.5
+anchor_bottom = -3.493
+offset_left = 70.0
+offset_top = 230.989
+offset_right = 209.0
+offset_bottom = 254.989
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.623529, 0.67451, 1, 1 )
+theme_override_fonts/font = SubResource( 106 )
+text = "MAX COMBO"
+align = 1
+valign = 1
+
+[node name="VSeparator" type="VSeparator" parent="Main/Maps/Results/Results/RS/H2"]
+modulate = Color( 1, 1, 1, 0 )
+offset_left = 286.0
+offset_right = 290.0
+offset_bottom = 360.0
+size_flags_horizontal = 3
+
+[node name="Mods" type="ReferenceRect" parent="Main/Maps/Results/Results/RS/H2"]
+offset_left = 294.0
+offset_right = 628.064
+offset_bottom = 360.598
+custom_minimum_size = Vector2( 334.064, 360.598 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedMod" type="ReferenceRect" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = -7.0
+offset_top = 65.0
+offset_right = 283.0
+offset_bottom = 97.0
+theme = ExtResource( 1 )
+border_color = Color( 0, 1, 1, 0 )
+script = ExtResource( 32 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod"]
+offset_left = 7.0
+offset_top = -35.0
+offset_right = 54.0
+offset_bottom = -3.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Speed"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="C" type="HBoxContainer" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 87.0
+alignment = 1
+
+[node name="MMM" type="Button" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C"]
+offset_left = 3.0
+offset_right = 35.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 32, 32 )
+focus_mode = 1
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+theme_override_styles/hover = SubResource( 148 )
+theme_override_styles/pressed = SubResource( 134 )
+theme_override_styles/focus = SubResource( 155 )
+theme_override_styles/normal = SubResource( 135 )
+toggle_mode = true
+shortcut_in_tooltip = false
+action_mode = 0
+group = SubResource( 93 )
+expand_icon = true
+
+[node name="Label2" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C/MMM"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 41.0
+pivot_offset = Vector2( 0, 16 )
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0, 0.321569, 1, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/font = SubResource( 94 )
+text = "<<<"
+align = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MM" type="Button" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C"]
+offset_left = 39.0
+offset_right = 71.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 32, 32 )
+focus_mode = 1
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+theme_override_styles/hover = SubResource( 149 )
+theme_override_styles/pressed = SubResource( 136 )
+theme_override_styles/focus = SubResource( 155 )
+theme_override_styles/normal = SubResource( 137 )
+toggle_mode = true
+shortcut_in_tooltip = false
+action_mode = 0
+group = SubResource( 93 )
+expand_icon = true
+
+[node name="Label2" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C/MM"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 41.0
+pivot_offset = Vector2( 0, 16 )
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.258824, 0.533333, 0.929412, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/font = SubResource( 94 )
+text = "<<"
+align = 1
+clip_text = true
+
+[node name="M" type="Button" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C"]
+offset_left = 75.0
+offset_right = 107.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 32, 32 )
+focus_mode = 1
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+theme_override_styles/hover = SubResource( 150 )
+theme_override_styles/pressed = SubResource( 138 )
+theme_override_styles/focus = SubResource( 155 )
+theme_override_styles/normal = SubResource( 139 )
+toggle_mode = true
+shortcut_in_tooltip = false
+action_mode = 0
+group = SubResource( 93 )
+expand_icon = true
+
+[node name="Label2" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C/M"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 41.0
+pivot_offset = Vector2( 0, 16 )
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.411765, 0.74902, 0.976471, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/font = SubResource( 94 )
+text = "<"
+align = 1
+clip_text = true
+
+[node name="Normal" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C"]
+offset_left = 111.0
+offset_right = 127.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 16, 0 )
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+group = SubResource( 93 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C/Normal"]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 41.0
+pivot_offset = Vector2( 0, 16 )
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 1, 1, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/font = SubResource( 94 )
+text = "="
+align = 1
+clip_text = true
+
+[node name="P" type="Button" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C"]
+offset_left = 131.0
+offset_right = 163.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 32, 32 )
+focus_mode = 1
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+theme_override_styles/hover = SubResource( 151 )
+theme_override_styles/pressed = SubResource( 140 )
+theme_override_styles/focus = SubResource( 155 )
+theme_override_styles/normal = SubResource( 141 )
+toggle_mode = true
+shortcut_in_tooltip = false
+action_mode = 0
+group = SubResource( 93 )
+expand_icon = true
+
+[node name="Label2" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C/P"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 41.0
+pivot_offset = Vector2( 0, 16 )
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.529412, 1, 0.45098, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/font = SubResource( 94 )
+text = ">"
+align = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PP" type="Button" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C"]
+offset_left = 167.0
+offset_right = 199.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 32, 32 )
+focus_mode = 1
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+theme_override_styles/hover = SubResource( 152 )
+theme_override_styles/pressed = SubResource( 142 )
+theme_override_styles/focus = SubResource( 155 )
+theme_override_styles/normal = SubResource( 143 )
+toggle_mode = true
+shortcut_in_tooltip = false
+action_mode = 0
+group = SubResource( 93 )
+expand_icon = true
+
+[node name="Label2" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C/PP"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 41.0
+pivot_offset = Vector2( 0, 16 )
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 0.952941, 0.45098, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/font = SubResource( 94 )
+text = ">>"
+align = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PPP" type="Button" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C"]
+offset_left = 203.0
+offset_right = 235.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 32, 32 )
+focus_mode = 1
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+theme_override_styles/hover = SubResource( 153 )
+theme_override_styles/pressed = SubResource( 144 )
+theme_override_styles/focus = SubResource( 155 )
+theme_override_styles/normal = SubResource( 145 )
+toggle_mode = true
+shortcut_in_tooltip = false
+action_mode = 0
+group = SubResource( 93 )
+expand_icon = true
+
+[node name="Label2" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C/PPP"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 41.0
+pivot_offset = Vector2( 0, 16 )
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.952941, 0.337255, 0.337255, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/font = SubResource( 94 )
+text = ">>>"
+align = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PPPP" type="Button" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C"]
+offset_left = 239.0
+offset_right = 271.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 32, 32 )
+focus_mode = 1
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+theme_override_styles/hover = SubResource( 154 )
+theme_override_styles/pressed = SubResource( 146 )
+theme_override_styles/focus = SubResource( 155 )
+theme_override_styles/normal = SubResource( 147 )
+toggle_mode = true
+shortcut_in_tooltip = false
+action_mode = 0
+group = SubResource( 93 )
+expand_icon = true
+
+[node name="Label2" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C/PPPP"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 41.0
+pivot_offset = Vector2( 0, 16 )
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/font = SubResource( 94 )
+text = ">>>>"
+align = 1
+clip_text = true
+
+[node name="Custom" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C"]
+offset_left = 275.0
+offset_right = 299.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 24, 0 )
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+group = SubResource( 93 )
+flat = true
+expand_icon = true
+
+[node name="CustomSpeed" type="SpinBox" parent="Main/Maps/Results/Results/RS/H2/Mods/SpeedMod/C"]
+offset_left = 303.0
+offset_right = 373.0
+offset_bottom = 32.0
+custom_minimum_size = Vector2( 70, 5 )
+pivot_offset = Vector2( 286, 872 )
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_icons/updown = ExtResource( 42 )
+min_value = 5.0
+max_value = 1000.0
+step = 0.01
+value = 100.0
+allow_greater = true
+suffix = "%"
+script = ExtResource( 100 )
+
+[node name="StartOffset" type="HSlider" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 89.0
+offset_top = 9.0
+offset_right = 274.0
+offset_bottom = 25.0
+theme = ExtResource( 1 )
+script = ExtResource( 59 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/StartOffset"]
+offset_left = -89.0
+offset_top = -13.0
+offset_right = -10.0
+offset_bottom = 26.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Start From"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="TimeTextBox" type="LineEdit" parent="Main/Maps/Results/Results/RS/H2/Mods/StartOffset"]
+offset_left = 188.0
+offset_top = -6.0
+offset_right = 244.0
+offset_bottom = 22.0
+text = "0:00"
+align = 1
+
+[node name="HpModel" type="MenuButton" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 107.0
+offset_top = 319.0
+offset_right = 291.0
+offset_bottom = 345.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_hover_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_pressed_color = Color( 0, 0, 0, 1 )
+text = "hp model here"
+flat = false
+align = 0
+script = ExtResource( 41 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/HpModel"]
+offset_left = -149.0
+offset_right = -10.0
+offset_bottom = 26.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Health Model"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="GradeSystem" type="MenuButton" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+visible = false
+offset_left = 130.0
+offset_top = 238.0
+offset_right = 314.0
+offset_bottom = 264.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_hover_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_pressed_color = Color( 0, 0, 0, 1 )
+text = "grade system here"
+flat = false
+align = 0
+script = ExtResource( 62 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/GradeSystem"]
+offset_left = -149.0
+offset_right = -10.0
+offset_bottom = 26.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Grade System"
+align = 2
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NoFail" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 96.0
+offset_top = 100.0
+offset_right = 156.0
+offset_bottom = 132.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 33 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/NoFail"]
+offset_left = -115.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Nofail"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="SuddenDeath" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 276.0
+offset_top = 100.0
+offset_right = 336.0
+offset_bottom = 132.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 44 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/SuddenDeath"]
+offset_left = -155.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Sudden Death"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="EasyMode" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 96.0
+offset_top = 130.0
+offset_right = 173.0
+offset_bottom = 162.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 96 )
+action_mode = 0
+flat = true
+script = ExtResource( 35 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/EasyMode"]
+offset_left = -115.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Extra Energy"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="HardMode" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 276.0
+offset_top = 129.0
+offset_right = 356.0
+offset_bottom = 161.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 96 )
+action_mode = 0
+flat = true
+script = ExtResource( 34 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/HardMode"]
+offset_left = -150.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "No Regen"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="MirrorX" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 96.0
+offset_top = 160.0
+offset_right = 156.0
+offset_bottom = 192.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 36 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/MirrorX"]
+offset_left = -115.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Mirror X"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="MirrorY" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 276.0
+offset_top = 160.0
+offset_right = 336.0
+offset_bottom = 192.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 37 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/MirrorY"]
+offset_left = -149.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Mirror Y"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="Nearsight" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+visible = false
+offset_left = 130.0
+offset_top = 135.0
+offset_right = 190.0
+offset_bottom = 167.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 43 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/Nearsight"]
+offset_left = -115.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Nearsighted"
+align = 2
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Earthquake" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 96.0
+offset_top = 190.0
+offset_right = 156.0
+offset_bottom = 222.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 94 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/Earthquake"]
+offset_left = -115.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Earthquake"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="Chaos" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 96.0
+offset_top = 220.0
+offset_right = 156.0
+offset_bottom = 252.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 60 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/Chaos"]
+offset_left = -115.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Chaos"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="Flashlight" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 96.0
+offset_top = 250.0
+offset_right = 156.0
+offset_bottom = 282.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 96 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/Flashlight"]
+offset_left = -143.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Flashlight"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="Ghost" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 276.0
+offset_top = 190.0
+offset_right = 336.0
+offset_bottom = 222.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 45 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/Ghost"]
+offset_left = -147.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Ghost"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="VisualMode" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 276.0
+offset_top = 220.0
+offset_right = 336.0
+offset_bottom = 252.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 63 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/VisualMode"]
+offset_left = -156.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Visual Map Mode"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="InvertMouse" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 276.0
+offset_top = 250.0
+offset_right = 336.0
+offset_bottom = 282.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 97 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/InvertMouse"]
+offset_left = -157.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Invert Mouse"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="HardRock" type="CheckBox" parent="Main/Maps/Results/Results/RS/H2/Mods"]
+offset_left = 96.0
+offset_top = 280.0
+offset_right = 156.0
+offset_bottom = 312.0
+theme = ExtResource( 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 92 )
+action_mode = 0
+flat = true
+script = ExtResource( 101 )
+
+[node name="Label" type="Label" parent="Main/Maps/Results/Results/RS/H2/Mods/HardRock"]
+offset_left = -115.0
+offset_right = -10.0
+offset_bottom = 32.0
+focus_mode = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.960784, 1, 0.478431, 1 )
+theme_override_fonts/font = SubResource( 91 )
+text = "Hard Rock"
+align = 2
+valign = 1
+clip_text = true
+
+[node name="VSeparator3" type="VSeparator" parent="Main/Maps/Results/Results/RS/H2"]
+modulate = Color( 1, 1, 1, 0 )
+offset_left = 632.0
+offset_right = 636.0
+offset_bottom = 360.0
+size_flags_horizontal = 3
+
+[node name="HSeparator5" type="HSeparator" parent="Main/Maps/Results/Results/RS"]
+modulate = Color( 1, 1, 1, 0 )
+offset_top = 707.0
+offset_right = 636.0
+offset_bottom = 742.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Deleted" type="CenterContainer" parent="Main/Maps/Results/Results"]
+visible = false
+offset_right = 294.0
+offset_bottom = 158.0
+
+[node name="Text" type="Label" parent="Main/Maps/Results/Results/Deleted"]
+offset_right = 294.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color( 0.956863, 0.729412, 0.537255, 1 )
+text = "The selected map has been deleted.
+
+----
+
+\"Drama is in the air? Wrong! Delete Server\"
+
+\"Deletion\" by Basil"
+align = 1
+valign = 1
+
+[node name="ColorRect" type="ColorRect" parent="Main/Maps/Results/Results/Deleted/Text"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -15.0
+offset_right = 25.0
+offset_bottom = 15.0
+color = Color( 0, 0, 0, 0.815686 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="VSeparator2" type="VSeparator" parent="Main/Maps/Results"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+offset_right = 4.0
+offset_bottom = 742.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+
+[node name="MapRegistry" type="VBoxContainer" parent="Main/Maps"]
+offset_left = 659.0
+offset_right = 1072.0
+offset_bottom = 742.0
+grow_horizontal = 0
+clip_contents = true
+size_flags_horizontal = 11
+size_flags_vertical = 3
+alignment = 2
+
+[node name="T" type="HBoxContainer" parent="Main/Maps/MapRegistry"]
+offset_right = 413.0
+offset_bottom = 50.0
+grow_horizontal = 0
+custom_minimum_size = Vector2( 0, 50 )
+size_flags_horizontal = 7
+size_flags_vertical = 5
+theme_override_constants/separation = 7
+
+[node name="VSeparator" type="VSeparator" parent="Main/Maps/MapRegistry/T"]
+modulate = Color( 1, 1, 1, 0 )
+offset_right = 52.0
+offset_bottom = 50.0
+size_flags_horizontal = 3
+
+[node name="Search" type="LineEdit" parent="Main/Maps/MapRegistry/T"]
+offset_left = 59.0
+offset_top = 11.0
+offset_right = 164.0
+offset_bottom = 39.0
+size_flags_horizontal = 7
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.0
+theme = ExtResource( 1 )
+clear_button_enabled = true
+placeholder_text = "Search"
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AuthorSearch" type="LineEdit" parent="Main/Maps/MapRegistry/T"]
+offset_left = 171.0
+offset_top = 11.0
+offset_right = 224.0
+offset_bottom = 39.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource( 1 )
+clear_button_enabled = true
+placeholder_text = "Author"
+script = ExtResource( 91 )
+
+[node name="Random" type="Button" parent="Main/Maps/MapRegistry/T"]
+offset_left = 231.0
+offset_top = 10.0
+offset_right = 413.0
+offset_bottom = 40.0
+custom_minimum_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource( 1 )
+action_mode = 0
+text = "Select random from search"
+
+[node name="S" type="Control" parent="Main/Maps/MapRegistry"]
+offset_top = 54.0
+offset_right = 413.0
+offset_bottom = 742.0
+grow_vertical = 2
+custom_minimum_size = Vector2( 340, 688 )
+clip_contents = true
+size_flags_horizontal = 11
+size_flags_vertical = 3
+script = ExtResource( 22 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Maps/MapRegistry/S"]
+physics_interpolation_mode = 2
+show_behind_parent = true
+anchor_left = 1.008
+anchor_right = 1.008
+anchor_bottom = 0.688
+offset_left = -458.881
+offset_top = 1.0
+offset_right = 3.09595
+offset_bottom = 181.656
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2( -244, -205 )
+clip_contents = true
+size_flags_horizontal = 11
+size_flags_vertical = 7
+theme_override_constants/separation = 2
+alignment = 2
+script = ExtResource( 105 )
+
+[node name="EMPTY" type="Panel" parent="Main/Maps/MapRegistry/S/VBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+offset_left = 61.0
+offset_top = 12.0
+offset_right = 461.0
+offset_bottom = 102.0
+custom_minimum_size = Vector2( 400, 90 )
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource( 70 )
+script = ExtResource( 18 )
+
+[node name="Select" type="Button" parent="Main/Maps/MapRegistry/S/VBoxContainer/EMPTY"]
+visible = false
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 73 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+disabled = true
+toggle_mode = true
+action_mode = 0
+group = SubResource( 67 )
+
+[node name="NODIF" type="Panel" parent="Main/Maps/MapRegistry/S/VBoxContainer"]
+offset_left = 61.0
+offset_top = 104.0
+offset_right = 461.0
+offset_bottom = 194.0
+custom_minimum_size = Vector2( 400, 90 )
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource( 70 )
+script = ExtResource( 18 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/NODIF"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/NODIF"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+pivot_offset = Vector2( 42, 42 )
+theme_override_fonts/font = SubResource( 71 )
+text = "N/A"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/NODIF"]
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/NODIF"]
+visible = false
+modulate = Color( 1, 0.360784, 0.360784, 0.784314 )
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 36.0
+offset_bottom = 35.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+
+[node name="Cloud" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/NODIF"]
+visible = false
+modulate = Color( 1, 1, 1, 0.384314 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -38.0
+offset_right = -9.0
+offset_bottom = -6.0
+texture = ExtResource( 67 )
+expand = true
+stretch_mode = 6
+
+[node name="Select" type="Button" parent="Main/Maps/MapRegistry/S/VBoxContainer/NODIF"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 73 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+disabled = true
+toggle_mode = true
+action_mode = 0
+group = SubResource( 67 )
+
+[node name="Name" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/NODIF"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 6.0
+offset_right = -75.0
+offset_bottom = -6.0
+theme = ExtResource( 1 )
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "OR3O
+[bongo cat & friends] meow"
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="EASY" type="Panel" parent="Main/Maps/MapRegistry/S/VBoxContainer"]
+self_modulate = Color( 0, 1, 0, 1 )
+offset_left = 61.0
+offset_top = 196.0
+offset_right = 461.0
+offset_bottom = 286.0
+custom_minimum_size = Vector2( 400, 90 )
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource( 70 )
+script = ExtResource( 18 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/EASY"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 0, 1, 0, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/EASY"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_fonts/font = SubResource( 75 )
+text = "EASY"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/EASY"]
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/EASY"]
+visible = false
+modulate = Color( 1, 0.360784, 0.360784, 0.784314 )
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 36.0
+offset_bottom = 35.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+
+[node name="Cloud" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/EASY"]
+visible = false
+modulate = Color( 1, 1, 1, 0.384314 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -38.0
+offset_right = -9.0
+offset_bottom = -6.0
+texture = ExtResource( 67 )
+expand = true
+stretch_mode = 6
+
+[node name="Select" type="Button" parent="Main/Maps/MapRegistry/S/VBoxContainer/EASY"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 73 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+disabled = true
+toggle_mode = true
+action_mode = 0
+group = SubResource( 67 )
+
+[node name="Name" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/EASY"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 6.0
+offset_right = -75.0
+offset_bottom = -6.0
+theme = ExtResource( 1 )
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "OR3O
+[bongo cat & friends] meow"
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="MEDIUM" type="Panel" parent="Main/Maps/MapRegistry/S/VBoxContainer"]
+self_modulate = Color( 1, 0.72549, 0, 1 )
+offset_left = 61.0
+offset_top = 288.0
+offset_right = 461.0
+offset_bottom = 378.0
+custom_minimum_size = Vector2( 400, 90 )
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource( 70 )
+script = ExtResource( 18 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/MEDIUM"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 1, 0.72549, 0, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/MEDIUM"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_fonts/font = SubResource( 76 )
+text = "MEDIUM"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/MEDIUM"]
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/MEDIUM"]
+visible = false
+modulate = Color( 1, 0.360784, 0.360784, 0.784314 )
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 36.0
+offset_bottom = 35.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+
+[node name="Cloud" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/MEDIUM"]
+visible = false
+modulate = Color( 1, 1, 1, 0.384314 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -38.0
+offset_right = -9.0
+offset_bottom = -6.0
+texture = ExtResource( 67 )
+expand = true
+stretch_mode = 6
+
+[node name="Select" type="Button" parent="Main/Maps/MapRegistry/S/VBoxContainer/MEDIUM"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 73 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+disabled = true
+toggle_mode = true
+action_mode = 0
+group = SubResource( 67 )
+
+[node name="Name" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/MEDIUM"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 6.0
+offset_right = -75.0
+offset_bottom = -6.0
+theme = ExtResource( 1 )
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "OR3O
+[bongo cat & friends] meow"
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="HARD" type="Panel" parent="Main/Maps/MapRegistry/S/VBoxContainer"]
+self_modulate = Color( 1, 0, 0, 1 )
+offset_left = 61.0
+offset_top = 380.0
+offset_right = 461.0
+offset_bottom = 470.0
+custom_minimum_size = Vector2( 400, 90 )
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource( 70 )
+script = ExtResource( 18 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/HARD"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/HARD"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_fonts/font = SubResource( 77 )
+text = "HARD"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/HARD"]
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/HARD"]
+visible = false
+modulate = Color( 1, 0.360784, 0.360784, 0.784314 )
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 36.0
+offset_bottom = 35.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+
+[node name="Cloud" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/HARD"]
+visible = false
+modulate = Color( 1, 1, 1, 0.384314 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -38.0
+offset_right = -9.0
+offset_bottom = -6.0
+texture = ExtResource( 67 )
+expand = true
+stretch_mode = 6
+
+[node name="Select" type="Button" parent="Main/Maps/MapRegistry/S/VBoxContainer/HARD"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 73 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+disabled = true
+toggle_mode = true
+action_mode = 0
+group = SubResource( 67 )
+
+[node name="Name" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/HARD"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 6.0
+offset_right = -75.0
+offset_bottom = -6.0
+theme = ExtResource( 1 )
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "OR3O
+[bongo cat & friends] meow"
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="LOGIC" type="Panel" parent="Main/Maps/MapRegistry/S/VBoxContainer"]
+self_modulate = Color( 0.843137, 0.415686, 1, 1 )
+offset_left = 61.0
+offset_top = 472.0
+offset_right = 461.0
+offset_bottom = 562.0
+custom_minimum_size = Vector2( 400, 90 )
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource( 70 )
+script = ExtResource( 18 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/LOGIC"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 0.843137, 0.415686, 1, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/LOGIC"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_fonts/font = SubResource( 78 )
+text = "LOGIC?"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/LOGIC"]
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/LOGIC"]
+visible = false
+modulate = Color( 1, 0.360784, 0.360784, 0.784314 )
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 36.0
+offset_bottom = 35.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+
+[node name="Cloud" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/LOGIC"]
+visible = false
+modulate = Color( 1, 1, 1, 0.384314 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -38.0
+offset_right = -9.0
+offset_bottom = -6.0
+texture = ExtResource( 67 )
+expand = true
+stretch_mode = 6
+
+[node name="Select" type="Button" parent="Main/Maps/MapRegistry/S/VBoxContainer/LOGIC"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 73 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+disabled = true
+toggle_mode = true
+action_mode = 0
+group = SubResource( 67 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/LOGIC"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 6.0
+offset_right = -75.0
+offset_bottom = -6.0
+theme = ExtResource( 1 )
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "OR3O
+[bongo cat & friends] meow"
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="AMOGUS" type="Panel" parent="Main/Maps/MapRegistry/S/VBoxContainer"]
+self_modulate = Color( 0.211765, 0.188235, 0.309804, 1 )
+offset_left = 61.0
+offset_top = 564.0
+offset_right = 461.0
+offset_bottom = 654.0
+custom_minimum_size = Vector2( 400, 90 )
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource( 70 )
+script = ExtResource( 18 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/AMOGUS"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 0.211765, 0.188235, 0.309804, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/AMOGUS"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+theme_override_fonts/font = SubResource( 79 )
+text = "助"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cover" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/AMOGUS"]
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 1, 1, 1, 0.588235 )
+material = SubResource( 72 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="F" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/AMOGUS"]
+visible = false
+modulate = Color( 1, 0.360784, 0.360784, 0.784314 )
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 36.0
+offset_bottom = 35.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 46 )
+
+[node name="Cloud" type="TextureRect" parent="Main/Maps/MapRegistry/S/VBoxContainer/AMOGUS"]
+visible = false
+modulate = Color( 1, 1, 1, 0.384314 )
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -38.0
+offset_right = -9.0
+offset_bottom = -6.0
+texture = ExtResource( 67 )
+expand = true
+stretch_mode = 6
+
+[node name="Select" type="Button" parent="Main/Maps/MapRegistry/S/VBoxContainer/AMOGUS"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 73 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+disabled = true
+toggle_mode = true
+action_mode = 0
+group = SubResource( 67 )
+
+[node name="Name" type="Label" parent="Main/Maps/MapRegistry/S/VBoxContainer/AMOGUS"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 6.0
+offset_right = -75.0
+offset_bottom = -6.0
+theme = ExtResource( 1 )
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = SubResource( 74 )
+text = "OR3O
+[bongo cat & friends] meow"
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="Press" type="AudioStreamPlayer" parent="Main/Maps/MapRegistry/S/VBoxContainer"]
+stream = ExtResource( 5 )
+volume_db = -16.0
+pitch_scale = 1.25
+
+[node name="ScrollControl" type="VBoxContainer" parent="Main/Maps"]
+offset_left = 1076.0
+offset_right = 1116.0
+offset_bottom = 742.0
+
+[node name="bump" type="Button" parent="Main/Maps/ScrollControl"]
+modulate = Color( 1, 1, 1, 0 )
+offset_right = 40.0
+offset_bottom = 50.0
+custom_minimum_size = Vector2( 0, 50 )
+theme = ExtResource( 1 )
+action_mode = 0
+
+[node name="M" type="Button" parent="Main/Maps/ScrollControl"]
+offset_top = 54.0
+offset_right = 40.0
+offset_bottom = 396.0
+custom_minimum_size = Vector2( 40, 0 )
+pivot_offset = Vector2( 8, 476 )
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+theme_override_styles/hover = SubResource( 80 )
+theme_override_styles/pressed = SubResource( 81 )
+theme_override_styles/focus = SubResource( 82 )
+theme_override_styles/disabled = SubResource( 83 )
+theme_override_styles/normal = SubResource( 84 )
+shortcut_in_tooltip = false
+action_mode = 0
+
+[node name="Label" type="Label" parent="Main/Maps/ScrollControl/M"]
+modulate = Color( 0.203922, 0.188235, 0.188235, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.0
+offset_bottom = -6.0
+theme_override_fonts/font = SubResource( 77 )
+text = "U
+P"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="P" type="Button" parent="Main/Maps/ScrollControl"]
+offset_top = 400.0
+offset_right = 40.0
+offset_bottom = 742.0
+custom_minimum_size = Vector2( 40, 0 )
+pivot_offset = Vector2( 8, 476 )
+size_flags_vertical = 3
+theme = ExtResource( 1 )
+theme_override_styles/hover = SubResource( 80 )
+theme_override_styles/pressed = SubResource( 81 )
+theme_override_styles/focus = SubResource( 82 )
+theme_override_styles/disabled = SubResource( 83 )
+theme_override_styles/normal = SubResource( 84 )
+shortcut_in_tooltip = false
+action_mode = 0
+
+[node name="Label" type="Label" parent="Main/Maps/ScrollControl/P"]
+modulate = Color( 0.203922, 0.188235, 0.188235, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.0
+offset_bottom = -6.0
+theme_override_fonts/font = SubResource( 77 )
+text = "D
+O
+W
+N"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="VSeparator2" type="VSeparator" parent="Main/Maps"]
+modulate = Color( 1, 1, 1, 0 )
+offset_left = 1120.0
+offset_right = 1125.0
+offset_bottom = 742.0
+theme_override_constants/separation = 5
+
+[node name="Filters" type="VBoxContainer" parent="Main/Maps"]
+offset_left = 1129.0
+offset_right = 1206.0
+offset_bottom = 742.0
+size_flags_horizontal = 5
+size_flags_vertical = 3
+theme_override_constants/separation = 7
+script = ExtResource( 20 )
+
+[node name="bump" type="Button" parent="Main/Maps/Filters"]
+modulate = Color( 1, 1, 1, 0 )
+offset_right = 77.0
+offset_bottom = 50.0
+custom_minimum_size = Vector2( 0, 50 )
+theme = ExtResource( 1 )
+action_mode = 0
+
+[node name="Label" type="Label" parent="Main/Maps/Filters"]
+offset_top = 57.0
+offset_right = 77.0
+offset_bottom = 77.0
+text = "Filters"
+
+[node name="Broken" type="CheckBox" parent="Main/Maps/Filters"]
+offset_top = 84.0
+offset_right = 77.0
+offset_bottom = 109.0
+custom_minimum_size = Vector2( 0, 25 )
+theme = ExtResource( 1 )
+theme_override_colors/font_disabled_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_focus_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 69 )
+action_mode = 0
+text = "broken"
+flat = true
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Online" type="CheckBox" parent="Main/Maps/Filters"]
+offset_top = 116.0
+offset_right = 77.0
+offset_bottom = 141.0
+custom_minimum_size = Vector2( 0, 25 )
+theme = ExtResource( 1 )
+theme_override_colors/font_disabled_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_focus_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 69 )
+pressed = true
+action_mode = 0
+text = "online"
+flat = true
+script = ExtResource( 92 )
+target = "last_search_incl_online"
+
+[node name="DiffSort" type="CheckBox" parent="Main/Maps/Filters"]
+offset_top = 148.0
+offset_right = 77.0
+offset_bottom = 173.0
+custom_minimum_size = Vector2( 0, 25 )
+theme = ExtResource( 1 )
+theme_override_colors/font_disabled_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_focus_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 69 )
+theme_override_icons/checked = ExtResource( 24 )
+theme_override_icons/unchecked = ExtResource( 25 )
+action_mode = 0
+text = "difficulty"
+flat = true
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameSort" type="CheckBox" parent="Main/Maps/Filters"]
+offset_top = 180.0
+offset_right = 77.0
+offset_bottom = 205.0
+custom_minimum_size = Vector2( 0, 25 )
+theme = ExtResource( 1 )
+theme_override_colors/font_disabled_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_focus_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_hover_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_colors/font_pressed_color = Color( 0.670588, 0.556863, 0.556863, 1 )
+theme_override_fonts/font = SubResource( 69 )
+theme_override_icons/checked = ExtResource( 24 )
+theme_override_icons/unchecked = ExtResource( 25 )
+action_mode = 0
+text = "name"
+flat = true
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="space" type="Control" parent="Main/Maps/Filters"]
+offset_top = 212.0
+offset_right = 77.0
+offset_bottom = 212.0
+custom_minimum_size = Vector2( 20, 0 )
+
+[node name="NODIF" type="Panel" parent="Main/Maps/Filters"]
+offset_top = 219.0
+offset_right = 32.0
+offset_bottom = 251.0
+custom_minimum_size = Vector2( 32, 32 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource( 59 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Filters/NODIF"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Main/Maps/Filters/NODIF"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+pivot_offset = Vector2( 42, 42 )
+theme_override_fonts/font = SubResource( 61 )
+text = "N"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select" type="Button" parent="Main/Maps/Filters/NODIF"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 63 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+action_mode = 0
+group = SubResource( 67 )
+
+[node name="EASY" type="Panel" parent="Main/Maps/Filters"]
+self_modulate = Color( 0, 1, 0, 1 )
+offset_top = 258.0
+offset_right = 32.0
+offset_bottom = 290.0
+custom_minimum_size = Vector2( 32, 32 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource( 59 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Filters/EASY"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 0, 1, 0, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Main/Maps/Filters/EASY"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+pivot_offset = Vector2( 42, 42 )
+theme_override_fonts/font = SubResource( 61 )
+text = "E"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="Select" type="Button" parent="Main/Maps/Filters/EASY"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 63 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+action_mode = 0
+group = SubResource( 67 )
+
+[node name="MEDIUM" type="Panel" parent="Main/Maps/Filters"]
+self_modulate = Color( 1, 0.72549, 0, 1 )
+offset_top = 297.0
+offset_right = 32.0
+offset_bottom = 329.0
+custom_minimum_size = Vector2( 32, 32 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource( 59 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Filters/MEDIUM"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 1, 0.72549, 0, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Main/Maps/Filters/MEDIUM"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+pivot_offset = Vector2( 42, 42 )
+theme_override_fonts/font = SubResource( 61 )
+text = "M"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select" type="Button" parent="Main/Maps/Filters/MEDIUM"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 63 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+action_mode = 0
+group = SubResource( 67 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HARD" type="Panel" parent="Main/Maps/Filters"]
+self_modulate = Color( 1, 0, 0, 1 )
+offset_top = 336.0
+offset_right = 32.0
+offset_bottom = 368.0
+custom_minimum_size = Vector2( 32, 32 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource( 59 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Filters/HARD"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Main/Maps/Filters/HARD"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+pivot_offset = Vector2( 42, 42 )
+theme_override_fonts/font = SubResource( 61 )
+text = "H"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select" type="Button" parent="Main/Maps/Filters/HARD"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 63 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+action_mode = 0
+group = SubResource( 67 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LOGIC" type="Panel" parent="Main/Maps/Filters"]
+self_modulate = Color( 0.843137, 0.415686, 1, 1 )
+offset_top = 375.0
+offset_right = 32.0
+offset_bottom = 407.0
+custom_minimum_size = Vector2( 32, 32 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource( 59 )
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Filters/LOGIC"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 0.843137, 0.415686, 1, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+texture = ExtResource( 16 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="Main/Maps/Filters/LOGIC"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+pivot_offset = Vector2( 42, 42 )
+theme_override_fonts/font = SubResource( 61 )
+text = "L"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select" type="Button" parent="Main/Maps/Filters/LOGIC"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 63 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+action_mode = 0
+group = SubResource( 67 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AMOGUS" type="Panel" parent="Main/Maps/Filters"]
+self_modulate = Color( 0.211765, 0.188235, 0.309804, 1 )
+offset_top = 414.0
+offset_right = 32.0
+offset_bottom = 446.0
+custom_minimum_size = Vector2( 32, 32 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource( 59 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Main/Maps/Filters/AMOGUS"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+self_modulate = Color( 0.211765, 0.188235, 0.309804, 1 )
+show_behind_parent = true
+material = SubResource( 60 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+texture = ExtResource( 16 )
+expand = true
+
+[node name="Label" type="Label" parent="Main/Maps/Filters/AMOGUS"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -3.0
+theme_override_fonts/font = SubResource( 68 )
+text = "助"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select" type="Button" parent="Main/Maps/Filters/AMOGUS"]
+material = SubResource( 62 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/hover = SubResource( 63 )
+theme_override_styles/pressed = SubResource( 63 )
+theme_override_styles/focus = SubResource( 64 )
+theme_override_styles/disabled = SubResource( 65 )
+theme_override_styles/normal = SubResource( 66 )
+action_mode = 0
+group = SubResource( 67 )
+
+[node name="VSeparator3" type="VSeparator" parent="Main/Maps"]
+modulate = Color( 1, 1, 1, 0 )
+offset_left = 1210.0
+offset_right = 1220.0
+offset_bottom = 742.0
+theme_override_constants/separation = 10
+
+[node name="Settings" type="ReferenceRect" parent="Main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="S" type="ScrollContainer" parent="Main/Settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+mouse_filter = 1
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="F" parent="Main/Settings/S" instance=ExtResource( 49 )]
+anchor_right = 0.0
+offset_right = 1210.0
+offset_bottom = 915.0
+clip_contents = true
+
+[node name="Credits" type="ReferenceRect" parent="Main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+border_color = Color( 1, 0, 0, 0 )
+
+[node name="C" type="HBoxContainer" parent="Main/Credits"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+script = ExtResource( 48 )
+
+[node name="S" type="ScrollContainer" parent="Main/Credits/C"]
+offset_right = 1216.0
+offset_bottom = 716.0
+clip_contents = false
+size_flags_horizontal = 3
+follow_focus = true
+scroll_horizontal_enabled = false
+scroll_deadzone = 45
+
+[node name="L" parent="Main/Credits/C/S" instance=ExtResource( 7 )]
+offset_bottom = 1893.0
+
+[node name="Content" type="ReferenceRect" parent="Main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+border_color = Color( 1, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" parent="Main/Content" instance=ExtResource( 103 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+custom_minimum_size = Vector2( 1216, 716 )
+script = null
+
+[node name="Language" type="ReferenceRect" parent="Main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+border_color = Color( 1, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LanguageMenu" parent="Main/Language" instance=ExtResource( 104 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+custom_minimum_size = Vector2( 1216, 716 )
+
+[node name="RhythiaRewrite" type="ReferenceRect" parent="Main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+border_color = Color( 1, 0, 0, 0 )
+
+[node name="RhythiaRewriteMenu" parent="Main/RhythiaRewrite" instance=ExtResource( 47 )]
+
+[node name="Quit" type="Button" parent="."]
+visible = false
+modulate = Color( 1, 0.6, 0.6, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_top = 15.0
+offset_right = -6.45044
+offset_bottom = 42.0
+theme = ExtResource( 1 )
+action_mode = 0
+text = "Quit"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ToContentMgr" type="Button" parent="Control"]
+visible = false
+modulate = Color( 0.552941, 0.988235, 1, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -159.0
+offset_top = 15.0
+offset_right = -64.0
+offset_bottom = 42.0
+grow_horizontal = 0
+theme = ExtResource( 1 )
+action_mode = 0
+text = "Add Songs"
+script = ExtResource( 8 )
+
+[node name="SidebarClick" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Sidebar" type="Panel" parent="."]
+anchor_bottom = 1.0
+offset_right = 60.0
+custom_minimum_size = Vector2( 60, 0 )
+clip_contents = true
+theme_override_styles/panel = SubResource( 1 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="L" type="VBoxContainer" parent="Sidebar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.0
+theme_override_constants/separation = 0
+
+[node name="Results" type="Button" parent="Sidebar/L"]
+offset_right = 58.0
+offset_bottom = 58.0
+custom_minimum_size = Vector2( 0, 58 )
+theme_override_styles/hover = SubResource( 4 )
+theme_override_styles/pressed = SubResource( 2 )
+theme_override_styles/focus = SubResource( 3 )
+theme_override_styles/disabled = SubResource( 4 )
+theme_override_styles/normal = SubResource( 4 )
+toggle_mode = true
+action_mode = 0
+group = SubResource( 5 )
+
+[node name="Tex" type="TextureRect" parent="Sidebar/L/Results"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource( 51 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Sidebar/L/Results"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+theme_override_fonts/font = SubResource( 6 )
+text = "Play Song"
+valign = 1
+
+[node name="MapSelect" type="Button" parent="Sidebar/L"]
+visible = false
+offset_top = 58.0
+offset_right = 58.0
+offset_bottom = 116.0
+custom_minimum_size = Vector2( 0, 58 )
+theme_override_styles/hover = SubResource( 4 )
+theme_override_styles/pressed = SubResource( 2 )
+theme_override_styles/focus = SubResource( 3 )
+theme_override_styles/disabled = SubResource( 4 )
+theme_override_styles/normal = SubResource( 4 )
+toggle_mode = true
+pressed = true
+action_mode = 0
+group = SubResource( 5 )
+
+[node name="Tex" type="TextureRect" parent="Sidebar/L/MapSelect"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource( 52 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Sidebar/L/MapSelect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+theme_override_fonts/font = SubResource( 6 )
+text = "Song Select"
+valign = 1
+
+[node name="Settings" type="Button" parent="Sidebar/L"]
+offset_top = 58.0
+offset_right = 58.0
+offset_bottom = 116.0
+custom_minimum_size = Vector2( 0, 58 )
+theme_override_styles/hover = SubResource( 4 )
+theme_override_styles/pressed = SubResource( 2 )
+theme_override_styles/focus = SubResource( 3 )
+theme_override_styles/disabled = SubResource( 4 )
+theme_override_styles/normal = SubResource( 4 )
+toggle_mode = true
+action_mode = 0
+group = SubResource( 5 )
+
+[node name="Tex" type="TextureRect" parent="Sidebar/L/Settings"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource( 53 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Sidebar/L/Settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+theme_override_fonts/font = SubResource( 6 )
+text = "Settings"
+valign = 1
+
+[node name="Credits" type="Button" parent="Sidebar/L"]
+offset_top = 116.0
+offset_right = 58.0
+offset_bottom = 174.0
+custom_minimum_size = Vector2( 0, 58 )
+theme_override_styles/hover = SubResource( 4 )
+theme_override_styles/pressed = SubResource( 2 )
+theme_override_styles/focus = SubResource( 3 )
+theme_override_styles/disabled = SubResource( 4 )
+theme_override_styles/normal = SubResource( 4 )
+toggle_mode = true
+action_mode = 0
+group = SubResource( 5 )
+
+[node name="Tex" type="TextureRect" parent="Sidebar/L/Credits"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Sidebar/L/Credits"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+theme_override_fonts/font = SubResource( 6 )
+text = "Credits"
+valign = 1
+
+[node name="ContentMgr" type="Button" parent="Sidebar/L"]
+offset_top = 174.0
+offset_right = 58.0
+offset_bottom = 232.0
+custom_minimum_size = Vector2( 0, 58 )
+theme_override_styles/hover = SubResource( 4 )
+theme_override_styles/pressed = SubResource( 2 )
+theme_override_styles/focus = SubResource( 3 )
+theme_override_styles/disabled = SubResource( 4 )
+theme_override_styles/normal = SubResource( 4 )
+toggle_mode = true
+action_mode = 0
+group = SubResource( 5 )
+
+[node name="Tex" type="TextureRect" parent="Sidebar/L/ContentMgr"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource( 54 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Sidebar/L/ContentMgr"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+theme_override_fonts/font = SubResource( 6 )
+text = "Content Manager"
+valign = 1
+
+[node name="Language" type="Button" parent="Sidebar/L"]
+offset_top = 232.0
+offset_right = 58.0
+offset_bottom = 290.0
+custom_minimum_size = Vector2( 0, 58 )
+theme_override_styles/hover = SubResource( 4 )
+theme_override_styles/pressed = SubResource( 2 )
+theme_override_styles/focus = SubResource( 3 )
+theme_override_styles/disabled = SubResource( 4 )
+theme_override_styles/normal = SubResource( 4 )
+toggle_mode = true
+action_mode = 0
+group = SubResource( 5 )
+
+[node name="Tex" type="TextureRect" parent="Sidebar/L/Language"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource( 102 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Sidebar/L/Language"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+theme_override_fonts/font = SubResource( 6 )
+text = "Language"
+valign = 1
+
+[node name="StartVR" type="Button" parent="Sidebar/L"]
+visible = false
+offset_top = 290.0
+offset_right = 58.0
+offset_bottom = 348.0
+custom_minimum_size = Vector2( 0, 58 )
+theme_override_styles/hover = SubResource( 4 )
+theme_override_styles/pressed = SubResource( 2 )
+theme_override_styles/focus = SubResource( 3 )
+theme_override_styles/disabled = SubResource( 4 )
+theme_override_styles/normal = SubResource( 4 )
+toggle_mode = true
+action_mode = 0
+group = SubResource( 5 )
+
+[node name="Tex" type="TextureRect" parent="Sidebar/L/StartVR"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource( 61 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Sidebar/L/StartVR"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+theme_override_fonts/font = SubResource( 6 )
+text = "Play in VR"
+valign = 1
+
+[node name="OldMenu" type="Button" parent="Sidebar/L"]
+visible = false
+offset_top = 290.0
+offset_right = 58.0
+offset_bottom = 348.0
+custom_minimum_size = Vector2( 0, 58 )
+theme_override_styles/hover = SubResource( 4 )
+theme_override_styles/pressed = SubResource( 2 )
+theme_override_styles/focus = SubResource( 3 )
+theme_override_styles/disabled = SubResource( 4 )
+theme_override_styles/normal = SubResource( 4 )
+toggle_mode = true
+action_mode = 0
+group = SubResource( 5 )
+
+[node name="Tex" type="TextureRect" parent="Sidebar/L/OldMenu"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource( 55 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Sidebar/L/OldMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+theme_override_fonts/font = SubResource( 8 )
+text = "Switch to Old Menu"
+valign = 1
+
+[node name="Quit" type="Button" parent="Sidebar/L"]
+offset_top = 290.0
+offset_right = 58.0
+offset_bottom = 348.0
+custom_minimum_size = Vector2( 0, 58 )
+theme_override_styles/hover = SubResource( 4 )
+theme_override_styles/pressed = SubResource( 2 )
+theme_override_styles/focus = SubResource( 3 )
+theme_override_styles/disabled = SubResource( 4 )
+theme_override_styles/normal = SubResource( 4 )
+toggle_mode = true
+action_mode = 0
+group = SubResource( 5 )
+
+[node name="Tex" type="TextureRect" parent="Sidebar/L/Quit"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource( 56 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Sidebar/L/Quit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+theme_override_fonts/font = SubResource( 8 )
+text = "Quit to Desktop"
+valign = 1
+
+[node name="RhythiaRewrite" type="Button" parent="Sidebar/L"]
+offset_top = 348.0
+offset_right = 58.0
+offset_bottom = 406.0
+custom_minimum_size = Vector2( 0, 58 )
+theme_override_styles/hover = SubResource( 4 )
+theme_override_styles/pressed = SubResource( 2 )
+theme_override_styles/focus = SubResource( 3 )
+theme_override_styles/disabled = SubResource( 4 )
+theme_override_styles/normal = SubResource( 4 )
+toggle_mode = true
+action_mode = 0
+group = SubResource( 5 )
+
+[node name="Tex" type="TextureRect" parent="Sidebar/L/RhythiaRewrite"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 53.0
+offset_bottom = 53.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="Sidebar/L/RhythiaRewrite"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+theme_override_fonts/font = SubResource( 6 )
+text = "Rhythia Rewrite"
+valign = 1
+
+[node name="Click" type="ColorRect" parent="Sidebar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="VersionNumber" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_top = -45.0
+offset_right = 359.0
+offset_bottom = -15.0
+grow_vertical = 2
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 0.705882, 0.945098, 1 )
+theme_override_fonts/font = SubResource( 7 )
+text = "Rhythia vX.Y.Z-branch"
+valign = 1
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="VersionNumber"]
+anchor_bottom = 1.0
+offset_left = -55.0
+offset_top = -4.0
+offset_right = -19.0
+offset_bottom = 2.0
+custom_minimum_size = Vector2( 36, 36 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="VersionNumberB" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -45.0
+offset_right = -24.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 2
+custom_minimum_size = Vector2( 0, 30 )
+theme = ExtResource( 1 )
+theme_override_colors/font_color = Color( 1, 0.705882, 0.945098, 1 )
+theme_override_fonts/font = SubResource( 7 )
+text = "Rhythia vX.Y.Z-branch"
+align = 2
+valign = 1
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="VersionNumberB"]
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -4.0
+offset_right = -6.0
+offset_bottom = 2.0
+custom_minimum_size = Vector2( 30, 30 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="WarningBar" type="ColorRect" parent="."]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 30.0
+color = Color( 0.278431, 0.490196, 0.580392, 1 )
+script = ExtResource( 95 )
+
+[node name="L" type="Label" parent="WarningBar"]
+anchor_bottom = 1.0
+offset_right = 201.0
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 0 )
+theme_override_fonts/font = SubResource( 157 )
+text = "This is a warning bar message"
+valign = 1
+
+[node name="L2" type="Label" parent="WarningBar"]
+anchor_bottom = 1.0
+offset_right = 201.0
+theme_override_colors/font_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 0 )
+theme_override_fonts/font = SubResource( 157 )
+text = "This is a warning bar message"
+valign = 1
+
+[node name="Button" type="Button" parent="WarningBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_type_variation = &"ToolButton"
+flat = true
+
+[node name="Download" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.698039 )
+script = ExtResource( 66 )
+
+[node name="Spinner" type="ReferenceRect" parent="Download"]
+process_mode = 3
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -100.0
+offset_right = 40.0
+offset_bottom = -20.0
+script = SubResource( 132 )
+
+[node name="0" type="Control" parent="Download/Spinner"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 25.0
+offset_bottom = 25.0
+
+[node name="ColorRect" type="ColorRect" parent="Download/Spinner/0"]
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Download/Spinner/0"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Download/Spinner/0"]
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 20.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Download/Spinner/0"]
+offset_left = 10.0
+offset_right = 20.0
+offset_bottom = 10.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Control" parent="Download/Spinner"]
+offset_left = 30.0
+offset_top = 5.0
+offset_right = 50.0
+offset_bottom = 25.0
+
+[node name="ColorRect" type="ColorRect" parent="Download/Spinner/1"]
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Download/Spinner/1"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Download/Spinner/1"]
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 20.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Download/Spinner/1"]
+offset_left = 10.0
+offset_right = 20.0
+offset_bottom = 10.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Control" parent="Download/Spinner"]
+offset_left = 55.0
+offset_top = 5.0
+offset_right = 75.0
+offset_bottom = 25.0
+
+[node name="ColorRect" type="ColorRect" parent="Download/Spinner/2"]
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Download/Spinner/2"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Download/Spinner/2"]
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 20.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Download/Spinner/2"]
+offset_left = 10.0
+offset_right = 20.0
+offset_bottom = 10.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Control" parent="Download/Spinner"]
+offset_left = 55.0
+offset_top = 30.0
+offset_right = 75.0
+offset_bottom = 50.0
+
+[node name="ColorRect" type="ColorRect" parent="Download/Spinner/3"]
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Download/Spinner/3"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Download/Spinner/3"]
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 20.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Download/Spinner/3"]
+offset_left = 10.0
+offset_right = 20.0
+offset_bottom = 10.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Control" parent="Download/Spinner"]
+offset_left = 55.0
+offset_top = 55.0
+offset_right = 75.0
+offset_bottom = 75.0
+
+[node name="ColorRect" type="ColorRect" parent="Download/Spinner/4"]
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Download/Spinner/4"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Download/Spinner/4"]
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 20.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Download/Spinner/4"]
+offset_left = 10.0
+offset_right = 20.0
+offset_bottom = 10.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" type="Control" parent="Download/Spinner"]
+offset_left = 30.0
+offset_top = 55.0
+offset_right = 50.0
+offset_bottom = 75.0
+
+[node name="ColorRect" type="ColorRect" parent="Download/Spinner/5"]
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Download/Spinner/5"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Download/Spinner/5"]
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 20.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Download/Spinner/5"]
+offset_left = 10.0
+offset_right = 20.0
+offset_bottom = 10.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6" type="Control" parent="Download/Spinner"]
+offset_left = 5.0
+offset_top = 55.0
+offset_right = 25.0
+offset_bottom = 75.0
+
+[node name="ColorRect" type="ColorRect" parent="Download/Spinner/6"]
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Download/Spinner/6"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Download/Spinner/6"]
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 20.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Download/Spinner/6"]
+offset_left = 10.0
+offset_right = 20.0
+offset_bottom = 10.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="7" type="Control" parent="Download/Spinner"]
+offset_left = 5.0
+offset_top = 30.0
+offset_right = 25.0
+offset_bottom = 50.0
+
+[node name="ColorRect" type="ColorRect" parent="Download/Spinner/7"]
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Download/Spinner/7"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color( 0.835294, 0.909804, 0.933333, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Download/Spinner/7"]
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 20.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Download/Spinner/7"]
+offset_left = 10.0
+offset_right = 20.0
+offset_bottom = 10.0
+color = Color( 0.941176, 0.94902, 0.952941, 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Download"]
+stream = ExtResource( 64 )
+volume_db = -3.0
+bus = "MenuReverb"
+
+[node name="Label" type="Label" parent="Download"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -10.0
+offset_right = 60.0
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_fonts/font = SubResource( 133 )
+text = "Downloading map..."
+align = 1
+
+[node name="Cancel" type="Button" parent="Download"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 50.0
+offset_right = 80.0
+offset_bottom = 80.0
+theme = ExtResource( 1 )
+action_mode = 0
+text = "Cancel"
+
+[node name="BlackFade" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mouse" type="GPUParticles2D" parent="."]
+z_index = 900
+emitting = false
+amount = 256
+lifetime = 0.5
+fixed_fps = 240
+visibility_rect = Rect2( -2048, -2048, 4096, 4096 )
+local_coords = false
+draw_order = 1
+process_material = SubResource( 173 )
+texture = ExtResource( 98 )
+script = ExtResource( 99 )

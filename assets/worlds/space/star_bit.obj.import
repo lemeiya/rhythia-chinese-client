@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bchubcgkdp5wq"
+path="res://.godot/imported/star_bit.obj-b0f6bd8d77356e55a2f72c81374ed740.mesh"
+
+[deps]
+
+files=["res://.godot/imported/star_bit.obj-b0f6bd8d77356e55a2f72c81374ed740.mesh"]
+
+source_file="res://assets/worlds/space/star_bit.obj"
+dest_files=["res://.godot/imported/star_bit.obj-b0f6bd8d77356e55a2f72c81374ed740.mesh", "res://.godot/imported/star_bit.obj-b0f6bd8d77356e55a2f72c81374ed740.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

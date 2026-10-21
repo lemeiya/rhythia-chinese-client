@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cx3gntppxou86"
+path="res://.godot/imported/Meganeko - Feral (osu! edit).mp3-eb737f9b97c72fd9e4c113828b1cd4e3.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/Meganeko - Feral (osu! edit).mp3"
+dest_files=["res://.godot/imported/Meganeko - Feral (osu! edit).mp3-eb737f9b97c72fd9e4c113828b1cd4e3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

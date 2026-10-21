@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://vmfe6csqtpns"
+path="res://.godot/imported/hair.obj-dd1b0c74aeea079a271ad1d853644d4f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hair.obj-dd1b0c74aeea079a271ad1d853644d4f.mesh"]
+
+source_file="res://assets/accessories/cubella_hair/hair.obj"
+dest_files=["res://.godot/imported/hair.obj-dd1b0c74aeea079a271ad1d853644d4f.mesh", "res://.godot/imported/hair.obj-dd1b0c74aeea079a271ad1d853644d4f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

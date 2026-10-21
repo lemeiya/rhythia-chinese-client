@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b8w7fbyfnps6d"
+path="res://.godot/imported/ears.obj-30772b8bf9186f0c2c723ede1810d521.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ears.obj-30772b8bf9186f0c2c723ede1810d521.mesh"]
+
+source_file="res://assets/accessories/alt_cubella_hair/ears.obj"
+dest_files=["res://.godot/imported/ears.obj-30772b8bf9186f0c2c723ede1810d521.mesh", "res://.godot/imported/ears.obj-30772b8bf9186f0c2c723ede1810d521.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

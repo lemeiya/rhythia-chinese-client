@@ -1,0 +1,315 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://debug/console/console.gd" type="Script" id=1]
+[ext_resource path="res://debug/console/window_title.gd" type="Script" id=2]
+[ext_resource path="res://debug/console/console_holder.gd" type="Script" id=3]
+[ext_resource path="res://assets/font/UbuntuMono/Regular.ttf" type="FontFile" id=4]
+[ext_resource path="res://debug/debug_ui.tres" type="Theme" id=5]
+[ext_resource path="res://assets/font/Roboto/Medium.ttf" type="FontFile" id=6]
+[ext_resource path="res://assets/font/UbuntuMono/Italic.ttf" type="FontFile" id=7]
+[ext_resource path="res://assets/font/UbuntuMono/Bold_Italic.ttf" type="FontFile" id=8]
+[ext_resource path="res://assets/font/UbuntuMono/Bold.ttf" type="FontFile" id=9]
+
+
+[sub_resource type="FontFile" id=2]
+size = 14
+outline_size = 2
+outline_color = Color( 0, 0, 0, 0.6 )
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="FontFile" id=3]
+size = 14
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="FontFile" id=4]
+size = 14
+outline_size = 2
+outline_color = Color( 0, 0, 0, 0.6 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="FontFile" id=5]
+size = 14
+outline_size = 2
+outline_color = Color( 0, 0, 0, 0.6 )
+use_filter = true
+font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxEmpty" id=1]
+content_margin_left = 5.0
+content_margin_right = 5.0
+
+[sub_resource type="FontFile" id=6]
+size = 14
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="FontFile" id=7]
+size = 28
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="FontFile" id=8]
+size = 14
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="FontFile" id=9]
+size = 14
+use_filter = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="FontFile" id=10]
+size = 14
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="FontFile" id=11]
+size = 14
+use_filter = true
+font_data = ExtResource( 9 )
+
+[sub_resource type="FontFile" id=12]
+size = 14
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="FontFile" id=13]
+size = 14
+use_filter = true
+font_data = ExtResource( 6 )
+
+[node name="Console" type="Control"]
+process_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource( 5 )
+script = ExtResource( 3 )
+
+[node name="Text" type="RichTextLabel" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_right = -10.0
+offset_bottom = 100.0
+theme = ExtResource( 5 )
+theme_override_colors/default_color = Color( 1, 1, 1, 1 )
+theme_override_colors/selection_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 0 )
+theme_override_fonts/mono_font = SubResource( 2 )
+theme_override_fonts/bold_italics_font = SubResource( 3 )
+theme_override_fonts/italics_font = SubResource( 4 )
+theme_override_fonts/bold_font = SubResource( 5 )
+theme_override_fonts/normal_font = SubResource( 2 )
+theme_override_styles/normal = SubResource( 1 )
+bbcode_enabled = true
+text = "[color=#77f][url=https://www.youtube.com/watch?v=dQw4w9WgXcQ]Console manual[/url][/color]"
+text = "Console manual"
+scroll_following = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConsoleWindow" type="Panel" parent="."]
+process_mode = 3
+offset_right = 800.0
+offset_bottom = 500.0
+custom_minimum_size = Vector2( 600, 450 )
+theme = ExtResource( 5 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="ConsoleWindow"]
+anchor_right = 1.0
+offset_left = 10.0
+offset_right = -10.0
+offset_bottom = 30.0
+custom_minimum_size = Vector2( 0, 20 )
+theme = ExtResource( 5 )
+theme_override_fonts/font = SubResource( 6 )
+theme_override_styles/normal = SubResource( 1 )
+text = "Debugging Console"
+valign = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="ConsoleWindow"]
+anchor_right = 1.0
+offset_left = 770.0
+offset_bottom = 30.0
+custom_minimum_size = Vector2( 0, 20 )
+theme = ExtResource( 5 )
+theme_override_fonts/font = SubResource( 7 )
+theme_override_styles/normal = SubResource( 1 )
+text = "×"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Holder" type="ScrollContainer" parent="ConsoleWindow"]
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 790.0
+offset_bottom = 460.0
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Panel" parent="ConsoleWindow/Holder"]
+offset_right = 780.0
+offset_bottom = 430.0
+custom_minimum_size = Vector2( 0, 380 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+
+[node name="Label" type="RichTextLabel" parent="ConsoleWindow/Holder/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 5 )
+theme_override_colors/default_color = Color( 1, 1, 1, 1 )
+theme_override_colors/selection_color = Color( 0, 0, 0, 1 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 0 )
+theme_override_fonts/mono_font = SubResource( 8 )
+theme_override_fonts/bold_italics_font = SubResource( 9 )
+theme_override_fonts/italics_font = SubResource( 10 )
+theme_override_fonts/bold_font = SubResource( 11 )
+theme_override_fonts/normal_font = SubResource( 8 )
+theme_override_styles/normal = SubResource( 1 )
+bbcode_enabled = true
+text = "[color=#77f][url=https://www.youtube.com/watch?v=dQw4w9WgXcQ]Console manual[/url][/color]"
+text = "Console manual"
+scroll_following = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CommandBar" type="LineEdit" parent="ConsoleWindow"]
+offset_left = 10.0
+offset_top = 465.0
+offset_right = 735.0
+offset_bottom = 495.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+theme = ExtResource( 5 )
+theme_override_fonts/font = SubResource( 12 )
+clear_button_enabled = true
+caret_blink = true
+caret_blink_interval = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Run" type="Button" parent="ConsoleWindow"]
+offset_left = 740.0
+offset_top = 465.0
+offset_right = 790.0
+offset_bottom = 495.0
+custom_minimum_size = Vector2( 0, 25 )
+theme = ExtResource( 5 )
+theme_override_fonts/font = SubResource( 13 )
+text = "Run"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Toasts" type="Node" parent="ConsoleWindow"]
+
+[node name="Normal" type="ColorRect" parent="ConsoleWindow/Toasts"]
+visible = false
+offset_top = 850.0
+offset_right = 1600.0
+offset_bottom = 900.0
+custom_minimum_size = Vector2( 0, 50 )
+color = Color( 0, 0, 0, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ConsoleWindow/Toasts/Normal"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Toast text"
+align = 1
+valign = 1
+
+[node name="Warning" type="ColorRect" parent="ConsoleWindow/Toasts"]
+visible = false
+offset_top = 850.0
+offset_right = 1600.0
+offset_bottom = 900.0
+custom_minimum_size = Vector2( 0, 50 )
+color = Color( 0.329412, 0.333333, 0.207843, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ConsoleWindow/Toasts/Warning"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Toast text"
+align = 1
+valign = 1
+
+[node name="Error" type="ColorRect" parent="ConsoleWindow/Toasts"]
+visible = false
+offset_top = 850.0
+offset_right = 1600.0
+offset_bottom = 900.0
+custom_minimum_size = Vector2( 0, 50 )
+color = Color( 0.423529, 0, 0, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ConsoleWindow/Toasts/Error"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Toast text"
+align = 1
+valign = 1
+
+[node name="Notice" type="ColorRect" parent="ConsoleWindow/Toasts"]
+visible = false
+offset_top = 850.0
+offset_right = 1600.0
+offset_bottom = 900.0
+custom_minimum_size = Vector2( 0, 50 )
+color = Color( 0.172549, 0.156863, 0.435294, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ConsoleWindow/Toasts/Notice"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Toast text"
+align = 1
+valign = 1
+
+[node name="DebugToastHolder" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = 0
+alignment = 2
