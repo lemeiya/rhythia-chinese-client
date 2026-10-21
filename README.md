@@ -27,6 +27,10 @@ Rhythia 中文客户端版是基于 [Sound Space Plus / Rhythia](https://github.
 - Windows x86_64 客户端构建支持
 - 可选的在线社区内容访问能力
 
+## 中文社区
+
+访问 [Rhythia 中文社区](https://rhythia.fastmay.top/) 获取社区动态、谱面和其他中文社区内容。
+
 ## 开发环境
 
 项目使用 Godot 4.3，请从 Godot 官网安装对应版本。
