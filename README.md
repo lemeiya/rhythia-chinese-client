@@ -5,7 +5,7 @@
 
 Rhythia 中文客户端版是基于 [Sound Space Plus / Rhythia](https://github.com/David20122/sound-space-plus) 的独立第三方客户端版本，面向中文玩家提供本地化界面、客户端功能改进和社区服务接入能力。
 
-本公开仓库只包含客户端及其开发所需的公开资源，不包含社区服务器或社区网站。
+本公开仓库只包含客户端及其运行所需的公开资源，不包含社区服务器或社区网站。
 
 ## 开源范围
 
@@ -29,22 +29,12 @@ Rhythia 中文客户端版是基于 [Sound Space Plus / Rhythia](https://github.
 
 ## 开发环境
 
-项目使用 Godot 4.3。Windows 控制台版编辑器位于：
-
-```text
-.tools/godot/4.3/Godot_v4.3-stable_win64_console.exe
-```
+项目使用 Godot 4.3，请从 Godot 官网安装对应版本。
 
 解析项目：
 
 ```powershell
-& .\.tools\godot\4.3\Godot_v4.3-stable_win64_console.exe --headless --path . --editor --quit
-```
-
-运行基础检查：
-
-```powershell
-& .\.tools\godot\4.3\Godot_v4.3-stable_win64_console.exe --headless --path . .tools\verify_runtime.tscn
+godot --headless --path . --editor --quit
 ```
 
 ## 用户数据
@@ -59,14 +49,13 @@ scenes/         Godot 场景
 assets/         游戏资源
 prefabs/        可复用场景组件
 localization/   本地化资源
-.tools/         开发和验证工具
 ```
 
 ## 许可与版权
 
 本项目基于上游 [Sound Space Plus / Rhythia](https://github.com/David20122/sound-space-plus) 修改。上游项目采用 MIT License，发布时应保留原作者版权声明和许可证文本。
 
-本仓库新增的中文本地化、客户端修改和公开工具代码属于本项目新增内容。第三方插件、Discord SDK、字体、音乐、谱面、图片和其他素材仍以各自许可证或授权范围为准，不因本项目使用 MIT License 而自动获得重新授权。
+本仓库新增的中文本地化和客户端修改属于本项目新增内容。第三方插件、Discord SDK、字体、音乐、谱面、图片和其他素材仍以各自许可证或授权范围为准，不因本项目使用 MIT License 而自动获得重新授权。
 
 ## 非官方声明
 
@@ -74,4 +63,4 @@ Rhythia 中文客户端版是独立第三方项目，与原作者、CAPO Games�
 
 ## 贡献
 
-欢迎提交客户端代码、中文本地化和公开工具的 Issue 或 Pull Request。提交代码或资源前，请确认其许可证允许在本项目中使用和再分发。
+欢迎提交客户端代码和中文本地化的 Issue 或 Pull Request。提交代码或资源前，请确认其许可证允许在本项目中使用和再分发。
